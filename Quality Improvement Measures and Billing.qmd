@@ -1,0 +1,1264 @@
+---
+title: "Quality Improvement Measures and Billing"
+subtitle: "July 2024 to June 2025"
+number-sections: true
+format: 
+  html:
+    toc: true
+    toc-location: right
+    code-fold: true
+    code-summary: "Show the code"
+    output: true
+  pdf:
+    documentclass: scrartcl
+    papersize: a4
+    toc: true
+    output: true
+    echo: false
+    geometry:
+      - left=20mm
+      - right=20mm
+      - top=20mm
+      - bottom=25mm
+      - textwidth=170mm
+    include-in-header:
+      text: |
+        \usepackage{float}
+        \floatplacement{figure}{H}
+execute:
+  warning: false
+  error: false
+  message: false
+  editor_options: 
+  chunk_output_type: console
+---
+
+## Introduction
+
+Comparing Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill (80% or more) and 'other' practices during the time period July 2024 to June 2025.
+
+The Quality Improvement Measures are intended to support a regional and national understanding of chronic disease management in areas of high need[^1]. Though the QIMs are not designed to assess individual general practices or general practitioner performance, general practices *are* encouraged to improve their Quality Improvement Measures relative to their peers.
+
+[^1]: [Practice Incentives Program Quality Improvement Measures: annual data update 2024-2025, AIHW](https://www.aihw.gov.au/reports/primary-health-care/pipqi-measures-2024-25/contents/introduction)
+
+General practices are incentivised, through Practice Incentive Program payments, to report Quality Improvement Measures to Primary Health Networks. As of 2024--2025 General practices have *not* been incentivised to meet any specified performance level in any of the Quality Improvement Measures.
+
+Data derived from Cubiko Touchstone, February 2026[^2].
+
+[^2]: According to the "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/) Touchstone used data from 811 general practices. At the time, 24% of those practices were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'.
+
+```{r}
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(stringr)
+```
+
+```{r}
+# 1) Import (skip title line)
+df <- read_excel(
+  "./Quality Improvement Measures vs Billing.xlsx",
+  skip = 1 # skip title row
+)
+
+# 2) Reshape: Centile values -> separate columns
+df_wide <- df %>%
+  # keep only the five centiles we need (defensive)
+  filter(Centile %in% c(10, 25, 50, 75, 90)) %>%
+  # ensure a sensible order
+  mutate(Centile = factor(Centile, levels = c(10, 25, 50, 75, 90))) %>%
+  # pivot to wide: one row per grouping combo, columns for each centile’s Proportion
+  pivot_wider(
+    id_cols = c(Billing, MMM, PHN, QIM, `QIM description`),
+    names_from  = Centile,
+    values_from = Proportion,
+    names_glue  = "p{Centile}",               # -> p10, p25, p50, p75, p90
+    values_fn   = list(Proportion = ~ mean(.x, na.rm = TRUE)), 
+    # ^ if duplicates exist within a group+centile, take the mean; 
+    #   replace with first(.x) or sum(.x) if preferred
+    values_fill = NA_real_
+  )
+
+# Result: df_wide has columns:
+# Billing, MMM, PHN, QIM, QIM description, p10, p25, p50, p75, p90
+```
+
+{{< pagebreak >}}
+
+## Modified Monash area - All, Primary Health networks - all
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-all-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, 10 QIMs"
+# 1) Filter to MMM = "All", PHN = "All" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "All", PHN == "All") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # spread percentiles 'wide'
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other" # title in Quarto figure caption
+    subtitle = "Subset: MMM = All, PHN = All\nbox = 25th– 50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
+```{r}
+#| label: fig-mmm-all-qim-mean
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Mean centiles"
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to MMM = "All", PHN = "All"
+df_sub <- df_wide %>%
+  filter(MMM == "All", PHN == "All")
+
+# 2) Average centiles across all QIMs within each Billing group
+df_avg <- df_sub %>%
+  group_by(Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Plot: two precomputed (stat = "identity") boxplots, one per Billing
+ggplot(
+  df_avg,
+  aes(
+    x = Billing,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill 80+% vs Other",
+    subtitle = "Mean centiles across all 10 QIMs (MMM = All, PHN = All)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "none",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Modified Monash Area - 1, Primary Health Network - All
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-1-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, MMM 1"
+
+# 1) Filter to MMM = "1", PHN = "All" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "All") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Subset: MMM = 1, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
+### Modified Monash Model (MMM) area comparison
+
+```{r}
+#| label: fig-mmm-all-qim-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, MMM comparison"
+# compare MMM areas
+# within each MMM, compare 'BB 80+' and 'Other'
+# 1) Subset to PHN = "All", exclude MMM = "All"
+df_sub <- df_wide %>%
+  filter(PHN == "All", MMM != "All")
+
+# 2) Average centiles across all QIMs within each MMM x Billing group
+df_avg <- df_sub %>%
+  group_by(MMM, Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Ensure MMM is ordered MMM1–MMM6
+df_avg <- df_avg %>%
+  mutate(MMM = factor(MMM, levels = paste0("MMM", 1:6)))
+
+# 4) Plot: all MMMs on one row, BB 80+ and Other dodged within each MMM
+ggplot(
+  df_avg,
+  aes(
+    x      = MMM,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat     = "identity",
+    width    = 0.45,
+    alpha    = 0.9,
+    position = position_dodge(width = 0.6)
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title    = "Quality Improvement Measures: Bulk-Bill 80+% vs Other by MMM",
+    subtitle = "Mean centiles across all QIMs (PHN = All)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x        = "MMM",
+    y        = "Proportion (%)",
+    fill     = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position  = "bottom",
+    plot.subtitle    = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r}
+#| label: fig-mmm-all-qim-weighted-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, MMM weighted mean[^weighted_mean] comparison"
+# compare MMM areas with weighted means
+
+# three QIMS (4, 5, 6) are all influenza vaccination, given very high weighting to those statistics. It is even possible for the same vaccination in an individual to be 'counted' in all three QIMs (if the patient is a 65+ year old with diabetes and COPD)
+# overall, the 'weighting' of QIMs (even if not deliberately emphasised or de-emphasised) is somewhat arbitrary since the QIM distribution doesn't necessarily reflect clinical importance
+
+# within each MMM, compare 'BB 80+' and 'Other'
+# 1) Subset to PHN = "All", exclude MMM = "All"
+df_sub <- df_wide %>%
+  filter(PHN == "All", MMM != "All") %>%
+  # assign 1/3 (one-third) weights to vaccination QIMs
+  mutate(qim_weight = if_else(QIM %in% c(4, 5, 6), 1/3, 1))
+
+# 2) Average centiles across all QIMs within each MMM x Billing group
+df_avg <- df_sub %>%
+  group_by(MMM, Billing) %>%
+  summarise(
+    p10 = weighted.mean(p10, w = qim_weight, na.rm = TRUE),
+    p25 = weighted.mean(p25, w = qim_weight, na.rm = TRUE),
+    p50 = weighted.mean(p50, w = qim_weight, na.rm = TRUE),
+    p75 = weighted.mean(p75, w = qim_weight, na.rm = TRUE),
+    p90 = weighted.mean(p90, w = qim_weight, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Ensure MMM is ordered MMM1–MMM6
+df_avg <- df_avg %>%
+  mutate(MMM = factor(MMM, levels = paste0("MMM", 1:6)))
+
+# 4) Plot: all MMMs on one row, BB 80+ and Other dodged within each MMM
+ggplot(
+  df_avg,
+  aes(
+    x      = MMM,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat     = "identity",
+    width    = 0.45,
+    alpha    = 0.9,
+    position = position_dodge(width = 0.6)
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title    = "Quality Improvement Measures: Bulk-Bill 80+% vs Other by MMM",
+    subtitle = "Weighted mean centiles across all QIMs (PHN = All)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x        = "MMM",
+    y        = "Proportion (%)",
+    fill     = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position  = "bottom",
+    plot.subtitle    = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+[^weighted_mean]: Three QIMS (4, 5, 6) are influenza vaccination QIMs. A single patient's influenza vaccination status can be counted in all three QIMs (if the patient is a 65+ year old living with diabetes and COPD). The 'weighted' mean reduces the influence of influenza vaccination QIMs by 1/3 compared to other QIMs, thereby reducing the overall influence of influenza vaccination on the mean QIM.
+
+## Primary Health Network - NWMPHN, Modified Monash Area - 1
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-1-phn-nwmphn-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN"
+# 1) Filter to MMM = "1", PHN = "NWMPHN" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "NWMPHN") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Subset: MMM = 1, PHN = NWMPHN\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
+```{r}
+#| label: fig-mmm-1-phn-nwmphn-qim-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN, mean comparison"
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to MMM = "All", PHN = "All"
+df_sub <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "NWMPHN")
+
+# 2) Average centiles across all QIMs within each Billing group
+df_avg <- df_sub %>%
+  group_by(Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Plot: two precomputed (stat = "identity") boxplots, one per Billing
+ggplot(
+  df_avg,
+  aes(
+    x = Billing,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Mean centiles across all 10 QIMs (MMM = 1, PHN = NWMPHN)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "none",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+### North West Melbourne PHN vs East Melbourne PHN
+
+```{r}
+#| label: fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN vs EMPHN, weighted mean comparison"
+# compare NWMPHN to EMPHN
+
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# three QIMS (4, 5, 6) are all influenza vaccination, given very high weighting to those statistics. It is even possible for the same vaccination in an individual to be 'counted' in all three QIMs (if the patient is a 65+ year old with diabetes and COPD)
+# overall, the 'weighting' of QIMs (even if not deliberately emphasised or de-emphasised) is somewhat arbitrary since the QIM distribution doesn't necessarily reflect clinical importance
+
+# within each MMM, compare 'BB 80+' and 'Other'
+# 1) Subset to PHN = "All", exclude MMM = "All"
+df_sub <- df_wide %>%
+  filter(
+    PHN %in% c("NWMPHN", "EMPHN"),
+    MMM == "MMM1",
+    Billing %in% c("BB 80+", "Other")
+  ) %>%
+  mutate(
+    PHN = factor(PHN, levels = c("NWMPHN", "EMPHN")),
+    Billing = factor(Billing, levels = c("BB 80+", "Other"))
+  ) %>%
+  # assign 1/3 (one-third) weights to vaccination QIMs
+  mutate(qim_weight = if_else(QIM %in% c(4, 5, 6), 1/3, 1))
+
+# 2) Average centiles across all QIMs within each MMM x Billing group
+df_avg <- df_sub %>%
+  group_by(PHN, Billing) %>%
+  summarise(
+    p10 = weighted.mean(p10, w = qim_weight, na.rm = TRUE),
+    p25 = weighted.mean(p25, w = qim_weight, na.rm = TRUE),
+    p50 = weighted.mean(p50, w = qim_weight, na.rm = TRUE),
+    p75 = weighted.mean(p75, w = qim_weight, na.rm = TRUE),
+    p90 = weighted.mean(p90, w = qim_weight, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Ensure one row per box
+stopifnot(all(dplyr::count(df_avg, PHN, Billing)$n == 1))
+
+# 3) Plot: two facets (BB 80+ | Other), each showing the three MMMs
+ggplot(
+  df_avg,
+  aes(
+    x      = PHN,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = PHN  # color by PHN; facets distinguish Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.6, alpha = 0.95, colour = "grey20") +
+  facet_wrap(~ Billing, nrow = 1) +
+  scale_fill_manual(values = c("NWMPHN" = "#4E79A7", "EMPHN" = "#F28E2B")) +
+  labs(
+    # title = "Quality Improvement Measures by Billing and PHN\nNWMPHN and EMPHN",
+    subtitle = "Weighted mean centiles across all QIMs\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "PHN"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r, fig.height=10, fig.width=6.5}
+#| label: fig-phn-nwmphn-emphn-mmm-1-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN vs EMPHN, all QIMs"
+
+# Compare all QIMs for two PHNs
+#   NWMPHN, EMPHN
+# 1) Filter to PHN, Billing, build QIM labels
+df_box <- df_wide %>%
+  filter(
+    PHN %in% c("NWMPHN", "EMPHN"),
+    Billing %in% c("BB 80+", "Other")
+  ) %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    Billing   = factor(Billing, levels = c("BB 80+", "Other")),
+    PHN       = factor(PHN, levels = c("NWMPHN", "EMPHN"))
+  ) %>%
+  # 2) Ensure exactly one row per (QIM × Billing × PHN) for identity boxplots
+  group_by(QIM_label, Billing, PHN) %>%
+  summarise(
+    p10 = mean(as.numeric(p10), na.rm = TRUE),
+    p25 = mean(as.numeric(p25), na.rm = TRUE),
+    p50 = mean(as.numeric(p50), na.rm = TRUE),
+    p75 = mean(as.numeric(p75), na.rm = TRUE),
+    p90 = mean(as.numeric(p90), na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  # 3) Build a unique x for each box to avoid dodging ambiguity
+  mutate(x_ib = interaction(Billing, PHN, lex.order = TRUE))
+
+# verify uniqueness: should be 1 everywhere
+stopifnot(all(dplyr::count(df_box, QIM_label, x_ib)$n == 1))
+
+# 4) Plot: facets = QIMs; x = interaction(Billing, PHN) => two Billing groups,
+#    each containing three adjacent PHN boxes
+ggplot(
+  df_box,
+  aes(
+    x      = x_ib,   # unique x per (Billing × PHN)
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = PHN
+  )
+) +
+  geom_boxplot(
+    stat   = "identity",
+    width  = 0.65,
+    alpha  = 0.95,
+    colour = "grey20"
+  ) +
+  facet_wrap(~ QIM_label, ncol = 2) +  
+  # Optional: show PHN in tick labels; prepend Billing for clarity
+  scale_x_discrete(
+    labels = function(x) {
+      # Turn "BB 80+ . PHN" into "BB 80+ | PHN"
+      str_replace(x, "^(BB 80\\+|Other)\\.(NWMPHN|EMPHN)$", "\\1 | \\2")
+    }
+  ) +
+  scale_fill_manual(values = c(
+    "NWMPHN" = "#4E79A7",
+    "EMPHN" = "#F28E2B"
+  )) +
+  labs(
+    # title    = "Quality Improvement Measures by Billing and PHN\nNWMPHN vs EMPHN",
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x        = NULL,
+    y        = "Proportion (%)",
+    fill     = "PHN"
+  ) +
+  annotate("segment", x = 3.5, xend = 3.5, y = -Inf, yend = Inf, colour = "grey85") +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position  = "top",
+    strip.text       = element_text(face = "bold", size = 9),
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(size = 8, angle = 30, hjust = 1)
+  )
+```
+
+## Primary Health Network - WentWest, Modified Monash Area - 1
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-phn-wentwest-mmm-1-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, WentWest"
+
+# 1) Filter to MMM = "1", PHN = "WentWest" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "WentWest") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Subset: MMM = 1, PHN = West Sydney\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r}
+#| label: fig-phn-wentwest-mmm-1-qim-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN vs EMPHN, weighted mean comparison"
+
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to MMM = "All", PHN = "All"
+df_sub <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "WentWest")
+
+# 2) Average centiles across all QIMs within each Billing group
+df_avg <- df_sub %>%
+  group_by(Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Plot: two precomputed (stat = "identity") boxplots, one per Billing
+ggplot(
+  df_avg,
+  aes(
+    x = Billing,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Mean centiles across all 10 QIMs (MMM = 1, PHN = West Sydney)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "none",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+### WentWest vs Southwest Sydney vs Sydney North
+
+```{r}
+#| label: fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, WentWest (MMM 1) vs SWSPHN (MMM 1, 2, 3)[^SWSPHN_MMM13] vs SydneyNorth (MMM1), weighted mean comparison"
+
+# compare WentWest to SWSPHN and SydneyNorth
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to the three MMMs, target PHN, and the two Billing groups
+df_sub <- df_wide %>%
+  filter(
+    PHN %in% c("WentWest", "SWSPHN", "SydneyNorth"),
+    Billing %in% c("BB 80+", "Other")
+  ) %>%
+  mutate(
+    PHN = factor(PHN, levels = c("WentWest", "SWSPHN", "SydneyNorth")),
+    Billing = factor(Billing, levels = c("BB 80+", "Other"))
+  ) %>%
+  # assign 1/3 (one-third) weights to vaccination QIMs
+  # otherwise influenza vaccination is (arguably) over-represented
+  # with three out of 10 QIMs being influenza vaccination
+  # and one patient's influenza vaccination status can be
+  # be represented in all three QIMs
+  mutate(qim_weight = if_else(QIM %in% c(4, 5, 6), 1/3, 1))
+
+# 2) Average centiles across all QIMs within each (PHN × Billing)
+df_avg <- df_sub %>%
+  group_by(PHN, Billing) %>%
+  summarise(
+    p10 = weighted.mean(p10, w = qim_weight, na.rm = TRUE),
+    p25 = weighted.mean(p25, w = qim_weight, na.rm = TRUE),
+    p50 = weighted.mean(p50, w = qim_weight, na.rm = TRUE),
+    p75 = weighted.mean(p75, w = qim_weight, na.rm = TRUE),
+    p90 = weighted.mean(p90, w = qim_weight, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Ensure one row per box
+stopifnot(all(dplyr::count(df_avg, PHN, Billing)$n == 1))
+
+# 3) Plot: two facets (BB 80+ | Other), each showing the three MMMs
+ggplot(
+  df_avg,
+  aes(
+    x      = PHN,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = PHN  # color by PHN; facets distinguish Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.6, alpha = 0.95, colour = "grey20") +
+  facet_wrap(~ Billing, nrow = 1) +
+  scale_fill_manual(values = c("WentWest" = "#4E79A7", "SWSPHN" = "#F28E2B", "SydneyNorth" = "#59A14F")) +
+  labs(
+    # title = "Quality Improvement Measures by Billing and PHN\nWentWest (MMM1), SWSPHN (MMM 1 to 3) and SydneyNorth (MMM1)",
+    subtitle = "Weighted mean centiles across all QIMs\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "PHN"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+[^SWSPHN_MMM13]: Not enough Cubiko data for general practices in SWSPHN MMM1 (or even MMM 1+2) to compare bulk-billing and 'other' billing practices in SWSPHN MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area. Comparison of statistics from MMM 1+2+3 SWSPHN practices with practices from MMM 1 practices from a different PHN should be done with caution.
+
+```{r, fig.height=10, fig.width=6.5}
+#| label: fig-phn-wentwest-swsphn-sydneynorth-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, WentWest (MMM 1) vs SWSPHN (MMM 1, 2, 3) vs SydneyNorth (MMM1), all QIMs"
+# Compare all QIMs for the three PHNS
+#   WentWest, SWSPHN, SydneyNorth
+# 1) Filter to PHN, Billing, build QIM labels
+df_box <- df_wide %>%
+  filter(
+    PHN %in% c("WentWest", "SWSPHN", "SydneyNorth"),
+    Billing %in% c("BB 80+", "Other")
+  ) %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    Billing   = factor(Billing, levels = c("BB 80+", "Other")),
+    PHN       = factor(PHN, levels = c("WentWest", "SWSPHN", "SydneyNorth"))
+  ) %>%
+  # 2) Ensure exactly one row per (QIM × Billing × PHN) for identity boxplots
+  group_by(QIM_label, Billing, PHN) %>%
+  summarise(
+    p10 = mean(as.numeric(p10), na.rm = TRUE),
+    p25 = mean(as.numeric(p25), na.rm = TRUE),
+    p50 = mean(as.numeric(p50), na.rm = TRUE),
+    p75 = mean(as.numeric(p75), na.rm = TRUE),
+    p90 = mean(as.numeric(p90), na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  # 3) Build a unique x for each box to avoid dodging ambiguity
+  mutate(x_ib = interaction(Billing, PHN, lex.order = TRUE))
+
+# verify uniqueness: should be 1 everywhere
+stopifnot(all(dplyr::count(df_box, QIM_label, x_ib)$n == 1))
+
+# 4) Plot: facets = QIMs; x = interaction(Billing, PHN) => two Billing groups,
+#    each containing three adjacent PHN boxes
+ggplot(
+  df_box,
+  aes(
+    x      = x_ib,   # unique x per (Billing × PHN)
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = PHN
+  )
+) +
+  geom_boxplot(
+    stat   = "identity",
+    width  = 0.65,
+    alpha  = 0.95,
+    colour = "grey20"
+  ) +
+  facet_wrap(~ QIM_label, ncol = 2) +  
+  # Optional: show PHN in tick labels; prepend Billing for clarity
+  scale_x_discrete(
+    labels = function(x) {
+      # Turn "BB 80+ . PHN" into "BB 80+ | PHN"
+      str_replace(x, "^(BB 80\\+|Other)\\.(WentWest|SWSPHN|SydneyNorth)$", "\\1 | \\2")
+    }
+  ) +
+  scale_fill_manual(values = c(
+    "WentWest" = "#4E79A7",
+    "SWSPHN" = "#F28E2B",
+    "SydneyNorth" = "#59A14F"
+  )) +
+  labs(
+    # title    = "Quality Improvement Measures by Billing and PHN\nWentWest, SWSPHN, SydneyNorth",
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x        = NULL,
+    y        = "Proportion (%)",
+    fill     = "PHN"
+  ) +
+  annotate("segment", x = 3.5, xend = 3.5, y = -Inf, yend = Inf, colour = "grey85") +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position  = "top",
+    strip.text       = element_text(face = "bold", size = 9),
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(size = 8, angle = 30, hjust = 1)
+  )
+```
+
+## Primary Health Network - Tasmania, Modified Monash Area - 1 to 3
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-phn-tasmania-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Tasmania (MMM 1+2+3)[Tasmania_MMM123], QIM all"
+# 1) Filter to MMM = "1", PHN = "WentWest" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM1to3", PHN == "Tasmania") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Subset: MMM = 1+2+3, PHN = Tasmania\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
+[Tasmania_MMM123]: Not enough Cubiko data for general practices in Tasmania MMM1 (or even MMM 1+2) to compare bulk-billing and 'other' billing practices in Tasmania MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area.
+
+```{r}
+#| label: fig-phn-tasmania-qim-mean
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Tasmania (MMM 1+2+3), mean comparison"
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to MMM = "All", PHN = "All"
+df_sub <- df_wide %>%
+  filter(MMM == "MMM1to3", PHN == "Tasmania")
+
+# 2) Average centiles across all QIMs within each Billing group
+df_avg <- df_sub %>%
+  group_by(Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Plot: two precomputed (stat = "identity") boxplots, one per Billing
+ggplot(
+  df_avg,
+  aes(
+    x = Billing,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Mean centiles across all 10 QIMs (MMM = 1+2+3, PHN = Tasmania)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "none",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Primary Health Network - Hunter, New England and Central Coast
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-phn-hneccphn-mmm-1-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, HNECCPHN (MMM 1), all QIMs"
+
+# 1) Filter to MMM = "1", PHN = "HNECCPHN" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "HNECCPHN") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Subset: MMM = 1, PHN = HNECCPHN\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
+```{r}
+#| label: fig-phn-hneccphn-mmm-1-qim--mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, HNECCPHN (MMM 1), mean comparison"
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to MMM = "All", PHN = "All"
+df_sub <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "HNECCPHN")
+
+# 2) Average centiles across all QIMs within each Billing group
+df_avg <- df_sub %>%
+  group_by(Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# 3) Plot: two precomputed (stat = "identity") boxplots, one per Billing
+ggplot(
+  df_avg,
+  aes(
+    x = Billing,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    subtitle = "Mean centiles across all 10 QIMs (MMM = 1, PHN = HNECCPHN)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "none",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+### Modified Monash Area comparison within HNECCPHN
+
+```{r, fig.width=6.5}
+#| label: fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, HNECCPHN, MMM zones, weighted mean comparison"
+# compare three MMM groups in HNECCPHN
+# df_wide columns assumed:
+# Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
+
+# 1) Subset to the three MMMs, target PHN, and the two Billing groups
+df_sub <- df_wide %>%
+  filter(
+    PHN == "HNECCPHN",
+    MMM %in% c("MMM1", "MMM2to4", "MMM5"),
+    Billing %in% c("BB 80+", "Other")
+  ) %>%
+  mutate(
+    MMM = factor(MMM, levels = c("MMM1", "MMM2to4", "MMM5")),
+    Billing = factor(Billing, levels = c("BB 80+", "Other"))
+  ) %>%
+  # assign 1/3 (one-third) weights to vaccination QIMs
+  # otherwise influenza vaccination is (arguably) over-represented
+  # with three out of 10 QIMs being influenza vaccination
+  # and one patient's influenza vaccination status can be
+  # be represented in all three QIMs
+  mutate(qim_weight = if_else(QIM %in% c(4, 5, 6), 1/3, 1))
+
+# 2) Average centiles across all QIMs within each (MMM × Billing)
+df_avg <- df_sub %>%
+  group_by(MMM, Billing) %>%
+  summarise(
+    p10 = weighted.mean(p10, w = qim_weight, na.rm = TRUE),
+    p25 = weighted.mean(p25, w = qim_weight, na.rm = TRUE),
+    p50 = weighted.mean(p50, w = qim_weight, na.rm = TRUE),
+    p75 = weighted.mean(p75, w = qim_weight, na.rm = TRUE),
+    p90 = weighted.mean(p90, w = qim_weight, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Ensure one row per box
+stopifnot(all(dplyr::count(df_avg, MMM, Billing)$n == 1))
+
+# 3) Plot: two facets (BB 80+ | Other), each showing the three MMMs
+ggplot(
+  df_avg,
+  aes(
+    x      = MMM,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = MMM  # color by MMM; facets distinguish Billing
+  )
+) +
+  geom_boxplot(stat = "identity", width = 0.6, alpha = 0.95, colour = "grey20") +
+  facet_wrap(~ Billing, nrow = 1) +
+  scale_fill_manual(values = c("MMM1" = "#4E79A7", "MMM2to4" = "#F28E2B", "MMM5" = "#59A14F")) +
+  labs(
+    # title = "Quality Improvement Measures by Billing and MMM",
+    subtitle = "Weighted mean centiles across all QIMs (PHN = HNECCPHN)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = NULL,
+    y = "Proportion (%)",
+    fill = "MMM"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r, fig.height=10, fig.width=6.5}
+# 1) Filter to PHN, Billing, and the three MMMs; build QIM labels
+df_box <- df_wide %>%
+  filter(
+    PHN == "HNECCPHN",
+    Billing %in% c("BB 80+", "Other"),
+    MMM %in% c("MMM1", "MMM2to4", "MMM5")
+  ) %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    Billing   = factor(Billing, levels = c("BB 80+", "Other")),
+    MMM       = factor(MMM,     levels = c("MMM1", "MMM2to4", "MMM5"))
+  ) %>%
+  # 2) Ensure exactly one row per (QIM × Billing × MMM) for identity boxplots
+  group_by(QIM_label, Billing, MMM) %>%
+  summarise(
+    p10 = mean(as.numeric(p10), na.rm = TRUE),
+    p25 = mean(as.numeric(p25), na.rm = TRUE),
+    p50 = mean(as.numeric(p50), na.rm = TRUE),
+    p75 = mean(as.numeric(p75), na.rm = TRUE),
+    p90 = mean(as.numeric(p90), na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  # 3) Build a unique x for each box to avoid dodging ambiguity
+  mutate(x_ib = interaction(Billing, MMM, lex.order = TRUE))
+
+# (Defensive) verify uniqueness: should be 1 everywhere
+stopifnot(all(dplyr::count(df_box, QIM_label, x_ib)$n == 1))
+
+# 4) Plot: facets = QIMs; x = interaction(Billing, MMM) => two Billing groups,
+#    each containing three adjacent MMM boxes
+ggplot(
+  df_box,
+  aes(
+    x      = x_ib,   # unique x per (Billing × MMM)
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = MMM
+  )
+) +
+  geom_boxplot(
+    stat   = "identity",
+    width  = 0.65,
+    alpha  = 0.95,
+    colour = "grey20"
+  ) +
+  facet_wrap(~ QIM_label, ncol = 2) +  
+  # Optional: show MMM in tick labels; prepend Billing for clarity
+  scale_x_discrete(
+    labels = function(x) {
+      # Turn "BB 80+ . MMM1" into "BB 80+ | MMM1"
+      str_replace(x, "^(BB 80\\+|Other)\\.(MMM1|MMM2to4|MMM5)$", "\\1 | \\2")
+    }
+  ) +
+  scale_fill_manual(values = c(
+    "MMM1"    = "#4E79A7",
+    "MMM2to4" = "#F28E2B",
+    "MMM5"    = "#59A14F"
+  )) +
+  labs(
+    title    = "Quality Improvement Measures by Billing and MMM",
+    subtitle = "(PHN = HNECCPHN)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x        = NULL,
+    y        = "Proportion (%)",
+    fill     = "MMM"
+  ) +
+  annotate("segment", x = 3.5, xend = 3.5, y = -Inf, yend = Inf, colour = "grey85") +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position  = "top",
+    strip.text       = element_text(face = "bold", size = 9),
+    panel.grid.minor = element_blank(),
+    axis.text.x      = element_text(size = 8, angle = 30, hjust = 1)
+  )
+```
