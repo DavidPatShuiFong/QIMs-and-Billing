@@ -47,6 +47,22 @@ Data derived from Cubiko Touchstone, February 2026[^2].
 
 [^2]: According to the "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/) Touchstone used data from 811 general practices. At the time, 24% of those practices were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'.
 
+## Results
+
+### Quality improvement measure performance is similar between predominantly bulk-billing clinics and 'other' clinics
+
+Quality Improvement Measure performance for predominantly bulk-billing clinics is broadly similar to 'other' clinics which privately bill more patients. Generally, the top 10th centile of predominantly bulk-billling clinics perform better than the 25th centile of 'other' clinics, the top 25th centile of bulk-billing clinics perform better than the 50th centile (median) of 'other' etc., and vice versa. This is the case both overall (@fig-mmm-all-qim-mean) for most individual QIMs (@fig-mmm-all-qim-all). 
+
+The statistics for a set of more homogenous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for predominantly bulk-billing clinics and 'other' clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
+
+### Characteristics of quality improvement measures where predominantly bulk-billing clinics tend to perform better (or worse) than 'other' clinics
+
+Predominantly bulk-billing clinics tend to perform better than 'other' clinic at quality improvement measures which involve brief and non-invasive screening and measurement e.g. smoking (QIM 2) and alcohol history (QIM 7),  weight and height measurement (QIM 3) and measuring the blood pressure of those who have diabetes (QIM 10).
+
+Predominantly bulk-billing clinics tend to perform worse than 'other' clinics at quality improvement measures requiring more patient time or discussion or persuasion, are more invasive procedures and/or more clinician time consuming.
+
+The first few factors may be due to low patient resources, cultural or social distance. Limitations in clinician time due to relatively poor remuneration (if predominantly bulk-billing) may also play a role.
+
 ```{r}
 library(readxl)
 library(dplyr)
@@ -903,7 +919,7 @@ ggplot(
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-tasmania-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Tasmania (MMM 1+2+3)[Tasmania_MMM123], QIM all"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Tasmania (MMM 1+2+3)[^Tasmania_MMM123], QIM all"
 # 1) Filter to MMM = "1", PHN = "WentWest" and prepare labels
 df_box <- df_wide %>%
   filter(MMM == "MMM1to3", PHN == "Tasmania") %>%
@@ -951,7 +967,7 @@ ggplot(
 
 ```
 
-[Tasmania_MMM123]: Not enough Cubiko data for general practices in Tasmania MMM1 (or even MMM 1+2) to compare bulk-billing and 'other' billing practices in Tasmania MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area.
+[^Tasmania_MMM123]: Not enough Cubiko data for general practices in Tasmania MMM1 (or even MMM 1+2) to compare bulk-billing and 'other' billing practices in Tasmania MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area.
 
 ```{r}
 #| label: fig-phn-tasmania-qim-mean
