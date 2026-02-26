@@ -33,6 +33,8 @@ execute:
   chunk_output_type: console
 ---
 
+{{< pagebreak >}}
+
 ## Introduction
 
 Comparing Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill (80% or more) and 'other' practices during the time period July 2024 to June 2025.
@@ -61,15 +63,33 @@ Predominantly bulk-billing clinics tend to perform better than 'other' clinic at
 
 Predominantly bulk-billing clinics perform comparatively worse than 'other' clinics at quality improvement measures requiring more patient time or discussion or persuasion, are more invasive procedures and/or more clinician time consuming.
 
+Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures might reduce health care screening activities and chronic disease management activities[^paul]. Dedicated time for quality improvement from empowered clinicians is important for effective participation, planning and conducting quality improvement activities[^Deilkås].
+
+[^valentin]: "Bridging inequity gaps in healthcare through tailored support: implementation perspectives of the Social Health Bridge-Building Programme", Valentin et al, 2025 Feb. *BMC Health Services Research* **25**:208. https://doi.org/10.1186/s12913-025-12359-8
+
+[^alkhamees]: "Patient-physician communication in intercultural settings: An integrative review", Alkhamees and Alasqah, 2023. *Heliyon* **9**(12): e2267. https://doi.org/10.1016/j.heliyon.2023.e22667
+
+[^watt]: "General Practitioners at the Deep End: The experience and views of general practitioners working in the most severely deprived areas of Scotland", Watt et al, 2012. Occasional paper *Royal College of General Practitioners*, 2012(April) (89), i–40.
+
+[^BuffelduVaure]: "Potential workload in applying clinical practice guidelines for patients with chronic conditions and multimorbidity: a systematic analysis" Buffel du Vaure et al, 2016. *BMJ Open* 2016;**6**:e010119. doi: 10.1136/bmjopen-2015-010119
+
+[^paul]: "Access to chronic disease care in general practice: the acceptability of implementing systematic waiting-room screening using computer-based patient-reported risk status.", Paul et al, 2013. *The British journal of general practice : the journal of the Royal College of General Practitioners*, **63**(614), e620–e626. https://doi.org/10.3399/bjgp13X671605
+
+[^Deilkås]: "Physician participation in quality improvement work - interest and opportunity: a cross-sectional survey", Deilkås et al, 2022. *BMC primary care*, **23**(1), 267. https://doi.org/10.1186/s12875-022-01878-6
+
 Slightly invasive and time-consuming (for patient and/or clinician) QIMs include taking blood to measure glycaemic control in diabetics (QIM 1) and taking measurements - including cholesterol etc. - for cardiovascular risk assessment (QIM 8).
 
 Slightly more time consuming and - in the view of some - invasive is the use of injectable therapeutics such as influenza vaccination (QIM 4, 5, 6). Higher vaccination rates in a clinic can also be dependent on expenditure of clinic time and resources e.g. sending out targeted patient reminders (and using resources to plan to do so), employment of a clinic nurse and clinic nurse time to review eligible patient population in the daily appointment book.
 
-Even more time consuming and - in the view of some - more invasive again is cervical screening (QIM 9). Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socio-economic disadvantage[^aihw_cst] and bulk-billing rates and bulk-blling rates are hierh in regions in the most socio-economically disadvantaged quintile [^saxby].  Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman] and male doctors are more likely to bulk-bill [^ochre].
+Influenza vaccination rates also varies with socioeconomic status. Cultural, linguistic and socioeconomic characteristics - including education and income - strongly influence influenza vaccination uptake among schoolchildren[^le]. Bulk-billing rates are higher in regions with the most socioeconomically disadvantaged quintile [^saxby].
 
-[^aihw_cst]: "National Cervical Screening Program monitoring report 2025", *Australian Institute of Health and Welfare (AIHW)*, Australian Government, 2025, accessed 24 February 2026. https://www.aihw.gov.au/reports/cancer-screening/ncsp-monitoring-report-2025/
+[^le]: "Socio-economic inequality underpins inequity in influenza vaccination uptake between public and private secondary schools: an Australian population-based study", Le et al, 2025. *The Lancet Regional Health. Western Pacific* **65**, 101761. https://doi.org/10.1016/j.lanwpc.2025.101761
 
 [^saxby]: "Bulk-billing rates and out-of-pocket costs for general practitioner services in Australia, 2022, by SA3 region: analysis of Medicare claims data", Saxby and Zhang, 2024. *Medical Journal of Australia* **222**(3):144--148
+
+Even more time consuming and - in the view of some - more invasive again is cervical screening (QIM 9). Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socio-economic disadvantage[^aihw_cst].   Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman] and male doctors are more likely to bulk-bill [^ochre].
+
+[^aihw_cst]: "National Cervical Screening Program monitoring report 2025", *Australian Institute of Health and Welfare (AIHW)*, Australian Government, 2025, accessed 24 February 2026. https://www.aihw.gov.au/reports/cancer-screening/ncsp-monitoring-report-2025/
 
 [^haas]: "Patient, provider, and clinic factors associated with the use of cervical cancer screening", Haas et al. *Preventive Medicine Reports* 2021 September **23**:101468. https://doi.org/10.1016/j.pmedr.2021.101468
 
@@ -77,7 +97,47 @@ Even more time consuming and - in the view of some - more invasive again is cerv
 
 [^ochre]: "[Insights into gender paygap amongst General Practitioners in Australia: An Ochre Health Study](https://ochrehealth.com.au/wp-content/uploads/2025/11/Paper-Insights-into-gender-paygap-amongst-general-pracitioners-An-Ochre-Health-study-May-2025.pdf)", Ochre Health Pty Ltd., April 2025.  
 
-The first few factors may be due to low patient resources, cultural or social distance. Limitations in clinician time due to relatively poor remuneration (if predominantly bulk-billing) may also play a role.
+### Quality improvement measures and rurality (Modified Monash Model areas)
+
+The Modified Monash Model (MMM) defines whether a location is metropolitan, rural, remote or very remote[^mmm]. The MMM has been designed to designate areas of increasing disadvantage due to poor access to healthcare and increased healthcare needs, e.g. related with low socioeconomic status[^mcgrail] [^versace]. The Modified Monash Model is used to determine eligibility for health workforce programs, including increased bulk-billing incentives[^gphotn2024].
+
+[^mcgrail]: "Discussion Paper: Development of a national Index of Access for Primary Health Care in Australia", McGrail and Humphreys, 2015. *Centre of Research Excellence in Rural and Remote Primary Health Care*. Monash University, School of Rural Health.
+
+[^versace]: "National analysis of the Modified Monash Model, population distribution and a socio-economic index to inform rural health workforce planning.", Versace et al, 2021. *Aust J Rural Health* 2021 Oct;**29**(5):801-810. doi: 10.1111/ajr.12805. PMID: 34672057.
+
+[^gphotn2024]: "General Practice Health of the Nation 2024", Royal Australian College of General Practitioners, 2024.
+
+Modified Monash Category | Inclusions
+---|---:
+MM 1 | **Metropolitan areas**: Major cities accounting for 70% of Australia’s population. All areas categorised ASGS-RA1
+MM 2 | **Regional centres**: Areas categorised ASGS-RA 2 and ASGS-RA 3 that are in, or within 20km road distance, of a town with a population greater than 50,000.
+MM 3 | **Large rural towns**: Areas categorised ASGS-RA 2 and ASGS-RA 3 that are not in MM 2 and are in, or within 15km road distance, of a town with a population between 15,000 and 50,000.
+MM 4 | **Medium rural towns**: Areas categorised ASGS-RA 2 and ASGS-RA 3 that are not in MM 2 or MM 3 and are in, or within 10km road distance, of a town with a population between 5,000 and 15,000.
+MM 5 | **Small rural towns**: All other areas in ASGS-RA 2 and 3.
+MM 6 | **Remote communities**: All areas categorised ASGS-RA 4 and islands that are separated from the mainland in the ABS geography and are less than 5km offshore.
+MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA 5 and populated islands separated from the mainland in the ABS geography that are more than 5km offshore.
+
+[^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
+
+Quality Improvement Measure performance is compared across MMM areas in @fig-mmm-all-qim-mean-comparison. Quality Improvement Measure performance is compared across the several MMM areas within a single primary health network (HNECCPHN) in @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison. Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance in both comparisons appears to *increase* for predominantly bulk-billing practices in MMM4 compared to MMM1 (both @fig-mmm-all-qim-mean-comparison and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison). MMM 5/6 QIM performance for predominantly bulk-billing practices is less than MMM 4 QIM performance both Australia-wide and also within the HNECCPHN. It is a potential avenue for future data exploration whether predominantly bulk-billing practices on either side of MMM boundaries have different QIM performance potentially attributable to different financial and workforce incentives (a 'natural experiment' into the effect of different incentives on QIM performance). 
+
+### Comparing quality improvement measures between primary health networks in relatively low and high socioeconomic areas
+
+Within each major Australian cities, some primary health networks serve populations which are, on average, more socioeconomically advantaged or disadvantaged than other primary health networks in the same city.
+
+Quality Improvement Measure outcomes such as cervical screening and influenza vaccination vary with socioeconomic advantage[^valenti]. It could be expected that overall QIM performance might vary between primary health networks which have populations with very different socioeconomic status.
+
+[^valenti]: "An analysis of general practice encounters by socioeconomic disadvantage", Valenti et al, 2016. *Australian Family Physician* **45**(10):702-705. https://www.racgp.org.au/afp/2016/october/an-analysis-of-general-practice-encounters-by-soci
+
+@sec-nwmphn-emphn compares the relatively prosperous East Melbourne PHN MMM1 area to the less prosperous North West Melbourne PHN MMM1 area. @sec-wentwest-sws-sn compares the relatively prosperous North Sydney PHN MMM1 area to the less prosperous Western Sydney PHN MMM1 area and the South West Sydney PHN MMM1+2+3[^swsphn] area. 
+
+[^swsphn]: Not enough South West Sydney MMM1 practice data is available from Cubiko for comparison statistics. The addition of MMM 2+3 to the South West Sydney PHN statistics is of interest, but has less validity than comparing purely MMM1 areas.
+
+Contrary to expectations, practices from NWMPHN, both predominantly bulk-billing and 'other' billing, appear to have better Quality Improvement Measure performance than their counterparts working in the generally more socio-economically advantaged EMPHN (@fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison). Likewise, WentWest practices, both predominantly bulk-billing and 'other' billing, appear to have better Quality Improvement Measure performance than their Sydney North counterparts (@fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison) (due to different range in MMMs, the South West Sydney and Sydney North PHN statistics are not as directly comparable).
+
+There is no obvious explanation for the unexpected finding that practices with low-resource populations have better QIM outcomes than practices from high-resource populations. Perhaps large proportions of primary care general practices in higher resource populations have 'specialised' into activities such as cosmetic medicine, and have reduced emphasis on 'basic' primary care activities such as weight measurement, taking an alcohol history and checking the blood pressure of patients living with diabetes. Perhaps practices in higher resource populations have a generally higher profit motive, which is associated with poorer quality outcomes[^brosig-koch]. Practices with low-resource populations might be more accustomed to encountering patients with chronic conditions and practices with high-resource populations might see more patients with minor acute conditions, e.g upper respiratory tract infections (Valenti et al, 2016). There is no readily available literature evidence that practice familiarity with chronic conditions in low socioeconomic status populations offsets the time consuming nature of practice when working with patients with multiple morbidity and low resources.
+
+[^brosig-koch]: "A new look at physicians’ responses to financial incentives: Quality of care, practice characteristics, and motivations", Brosig-Koch et al, 2024. *Journal of Health Economics* **94**, March 2024, 102862. https://doi.org/10.1016/j.jhealeco.2024.102862
 
 ```{r}
 library(readxl)
@@ -511,7 +571,7 @@ ggplot(
   )
 ```
 
-### North West Melbourne PHN vs East Melbourne PHN
+### North West Melbourne PHN vs East Melbourne PHN {#sec-nwmphn-emphn}
 
 ```{r}
 #| label: fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison
@@ -773,7 +833,7 @@ ggplot(
   )
 ```
 
-### WentWest vs Southwest Sydney vs Sydney North
+### WentWest vs Southwest Sydney vs Sydney North {#sec-wentwest-sws-sn}
 
 ```{r}
 #| label: fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison
