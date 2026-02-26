@@ -37,21 +37,21 @@ execute:
 
 Comparing Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill (80% or more) and 'other' practices during the time period July 2024 to June 2025.
 
-The Quality Improvement Measures are intended to support a regional and national understanding of chronic disease management in areas of high need[^1]. Though the QIMs are not designed to assess individual general practices or general practitioner performance, general practices *are* encouraged to improve their Quality Improvement Measures relative to their peers.
+The Quality Improvement Measures are intended to support a regional and national understanding of chronic disease management in areas of high need[^aihw_qim]. Though the QIMs are not designed to assess individual general practices or general practitioner performance, general practices *are* encouraged to improve their Quality Improvement Measures relative to their peers.
 
-[^1]: [Practice Incentives Program Quality Improvement Measures: annual data update 2024-2025, AIHW](https://www.aihw.gov.au/reports/primary-health-care/pipqi-measures-2024-25/contents/introduction)
+[^aihw_qim]: "[Practice Incentives Program Quality Improvement Measures: annual data update 2024-2025](https://www.aihw.gov.au/reports/primary-health-care/pipqi-measures-2024-25/contents/introduction)", Australian Institute of Health and Welfare (AIHW), Australian Government
 
 General practices are incentivised, through Practice Incentive Program payments, to report Quality Improvement Measures to Primary Health Networks. As of 2024--2025 General practices have *not* been incentivised to meet any specified performance level in any of the Quality Improvement Measures.
 
-Data derived from Cubiko Touchstone, February 2026[^2].
+Data derived from Cubiko Touchstone, February 2026[^cubiko].
 
-[^2]: According to the "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/) Touchstone used data from 811 general practices. At the time, 24% of those practices were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'.
+[^cubiko]: "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/). Touchstone used data from 811 general practices. At the time, 24% of those practices were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'.
 
 ## Results
 
 ### Quality improvement measure performance is similar between predominantly bulk-billing clinics and 'other' clinics
 
-Quality Improvement Measure performance for predominantly bulk-billing clinics is broadly similar to 'other' clinics which privately bill more patients. Generally, the top 10th centile of predominantly bulk-billling clinics perform better than the 25th centile of 'other' clinics, the top 25th centile of bulk-billing clinics perform better than the 50th centile (median) of 'other' etc., and vice versa. This is the case both overall (@fig-mmm-all-qim-mean) for most individual QIMs (@fig-mmm-all-qim-all). 
+Quality Improvement Measure performance for predominantly bulk-billing clinics is broadly similar to 'other' clinics which privately bill more patients. The box-plot interquartile range distribution of bulk-billing clinics and 'other' clinics overlap closely across virtually every QIM and Modified Monash Model area. Generally, the top 10th centile of predominantly bulk-billling clinics perform better than the 25th centile of 'other' clinics, the top 25th centile of bulk-billing clinics perform better than the 50th centile (median) of 'other' etc., and vice versa. Medians are nearly identical. This is the case both overall (@fig-mmm-all-qim-mean) and for most individual QIMs (@fig-mmm-all-qim-all). 
 
 The statistics for a set of more homogenous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for predominantly bulk-billing clinics and 'other' clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
 
@@ -59,7 +59,23 @@ The statistics for a set of more homogenous practices, such as practices located
 
 Predominantly bulk-billing clinics tend to perform better than 'other' clinic at quality improvement measures which involve brief and non-invasive screening and measurement e.g. smoking (QIM 2) and alcohol history (QIM 7),  weight and height measurement (QIM 3) and measuring the blood pressure of those who have diabetes (QIM 10).
 
-Predominantly bulk-billing clinics tend to perform worse than 'other' clinics at quality improvement measures requiring more patient time or discussion or persuasion, are more invasive procedures and/or more clinician time consuming.
+Predominantly bulk-billing clinics perform comparatively worse than 'other' clinics at quality improvement measures requiring more patient time or discussion or persuasion, are more invasive procedures and/or more clinician time consuming.
+
+Slightly invasive and time-consuming (for patient and/or clinician) QIMs include taking blood to measure glycaemic control in diabetics (QIM 1) and taking measurements - including cholesterol etc. - for cardiovascular risk assessment (QIM 8).
+
+Slightly more time consuming and - in the view of some - invasive is the use of injectable therapeutics such as influenza vaccination (QIM 4, 5, 6). Higher vaccination rates in a clinic can also be dependent on expenditure of clinic time and resources e.g. sending out targeted patient reminders (and using resources to plan to do so), employment of a clinic nurse and clinic nurse time to review eligible patient population in the daily appointment book.
+
+Even more time consuming and - in the view of some - more invasive again is cervical screening (QIM 9). Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socio-economic disadvantage[^aihw_cst] and bulk-billing rates and bulk-blling rates are hierh in regions in the most socio-economically disadvantaged quintile [^saxby].  Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman] and male doctors are more likely to bulk-bill [^ochre].
+
+[^aihw_cst]: "National Cervical Screening Program monitoring report 2025", *Australian Institute of Health and Welfare (AIHW)*, Australian Government, 2025, accessed 24 February 2026. https://www.aihw.gov.au/reports/cancer-screening/ncsp-monitoring-report-2025/
+
+[^saxby]: "Bulk-billing rates and out-of-pocket costs for general practitioner services in Australia, 2022, by SA3 region: analysis of Medicare claims data", Saxby and Zhang, 2024. *Medical Journal of Australia* **222**(3):144--148
+
+[^haas]: "Patient, provider, and clinic factors associated with the use of cervical cancer screening", Haas et al. *Preventive Medicine Reports* 2021 September **23**:101468. https://doi.org/10.1016/j.pmedr.2021.101468
+
+[^incecushman]: "Association of primary care physician sex with cervical cancer and mammography screening", Ince-Cushman et al. 2013 Jan *Canadian Family Physician*  **59**(1):e11-18. https://pubmed.ncbi.nlm.nih.gov/23341674/
+
+[^ochre]: "[Insights into gender paygap amongst General Practitioners in Australia: An Ochre Health Study](https://ochrehealth.com.au/wp-content/uploads/2025/11/Paper-Insights-into-gender-paygap-amongst-general-pracitioners-An-Ochre-Health-study-May-2025.pdf)", Ochre Health Pty Ltd., April 2025.  
 
 The first few factors may be due to low patient resources, cultural or social distance. Limitations in clinician time due to relatively poor remuneration (if predominantly bulk-billing) may also play a role.
 
