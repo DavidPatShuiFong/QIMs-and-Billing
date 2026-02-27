@@ -116,7 +116,7 @@ Influenza vaccination rates also varies with socioeconomic status. Cultural, lin
 
 Influenza vaccination rates in a clinic is improved by expenditure of clinic time and resources e.g. sending out targeted patient reminders (and using resources to plan to do so), employment of a clinic nurse and clinic nurse time to review eligible patient population in the daily appointment book.
 
-Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socioeconomic disadvantage[^aihw_cst].   Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman]. Male doctors are more likely to bulk-bill [^ochre]. The lower performance of bulk-billing clinics in cervical screening could be the result of an intersection between gender, billing incentives and workforce composition.
+Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socioeconomic disadvantage[^aihw_cst]. Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman]. Male doctors are more likely to bulk-bill[^ochre]. The lower performance of bulk-billing clinics in cervical screening could be the result of an intersection between gender, billing incentives and workforce composition.
 
 [^aihw_cst]: "National Cervical Screening Program monitoring report 2025", *Australian Institute of Health and Welfare (AIHW)*, Australian Government, 2025, accessed 24 February 2026. https://www.aihw.gov.au/reports/cancer-screening/ncsp-monitoring-report-2025/
 
@@ -1250,6 +1250,7 @@ ggplot(
 ```{r, fig.width=6.5}
 #| label: fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison
 #| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, HNECCPHN, MMM zones, weighted mean comparison"
+
 # compare three MMM groups in HNECCPHN
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
@@ -1319,6 +1320,9 @@ ggplot(
 ```
 
 ```{r, fig.height=10, fig.width=6.5}
+#| label: fig-phn-hneccphn-mmm-comparison
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, HNECCPHN, across MMM 1, 2+3+4 and 5"
+
 # 1) Filter to PHN, Billing, and the three MMMs; build QIM labels
 df_box <- df_wide %>%
   filter(
