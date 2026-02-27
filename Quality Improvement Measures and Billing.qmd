@@ -134,7 +134,7 @@ Workforce data on GP gender distribution by socioeconomic region and billing typ
 
 ### Quality improvement measures and rurality (Modified Monash Model areas)
 
-Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance appears to *increase* for bulk-billing practices in MMM4 compared to MMM1 (@fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN). MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN.
+Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance appears to *increase* for bulk-billing practices in MMM4 (medium rural towns) compared to MMM1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN.
 
 The Modified Monash Model (MMM) defines whether a location is metropolitan, rural, remote or very remote[^mmm]. The MMM has been designed to designate areas of increasing disadvantage due to poor access to healthcare and increased healthcare needs, e.g. related with low socioeconomic status[^mcgrail] [^versace]. The Modified Monash Model is used to determine eligibility for health workforce programs, including increased bulk-billing incentives[^gphotn2024].
 
@@ -153,6 +153,8 @@ MM 4 | **Medium rural towns**: Areas categorised ASGS-RA 2 and ASGS-RA 3 that ar
 MM 5 | **Small rural towns**: All other areas in ASGS-RA 2 and 3.
 MM 6 | **Remote communities**: All areas categorised ASGS-RA 4 and islands that are separated from the mainland in the ABS geography and are less than 5km offshore.
 MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA 5 and populated islands separated from the mainland in the ABS geography that are more than 5km offshore.
+
+: Modified Monash Model (MMM) categories {#tbl-mmm}
 
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
