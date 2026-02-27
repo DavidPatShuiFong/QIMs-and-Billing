@@ -1,6 +1,31 @@
 ---
-title: "Quality Improvement Measures and Billing"
-subtitle: "July 2024 to June 2025"
+title: "Do bulk-billing General Practitioner clinics provide lower quality care?"
+subtitle: "Evidence from July 2024 to June 2025 data"
+date: 27 February 2026
+date-format: long
+author: Dr David P.S. Fong
+abstract: |
+  General practices that predominatly bulk-bill (80% or more of consultations) perform at
+  broadly similar levels to other practices across Australia's ten chronic disease Quality
+  Improvement Measures (QIMs). Medians are nearly identical and performance distributions
+  overlap closely across most QIMs and geographic areas.
+  
+  Where differences exist, they follow a consistent pattern: bulk-billing practices perform
+  better on brief, non-invasive measures such as recording smoking status, alcohol history
+  and weight. They perform compartively worse on measures requiring more clinician time or
+  procedures - such as measuring glycaemic control in diabetes, influenza immunisation and
+  particularly cervical screening. Structural factors, including time pressure, patients
+  living with low socioeconomic resources, multiple morbidity, cultural distance and 
+  scarcity of same-gendered clinicians are plausible explanataions.
+  
+  Contrary to expectations, practices in primary health networks with lower socioeconomic
+  populations - including North West Melbourne and Western Sydney - outperform those in more
+  advantaged primary health networks in the same cities. The reasons are unclear and warrant
+  further investigation.
+  
+  Targeted support for time-intensive chronic diseases at practices with high-need and
+  disadvantaged populations represent the clearest policy opportunity identified
+  by this data.
 number-sections: true
 format: 
   html:
@@ -37,33 +62,41 @@ execute:
 
 ## Introduction
 
-Comparing Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill (80% or more) and 'other' practices during the time period July 2024 to June 2025.
-
-The Quality Improvement Measures are intended to support a regional and national understanding of chronic disease management in areas of high need[^aihw_qim]. Though the QIMs are not designed to assess individual general practices or general practitioner performance, general practices *are* encouraged to improve their Quality Improvement Measures relative to their peers.
+The Quality Improvement Measures (QIMs) are intended to support a regional and national understanding of chronic disease management in areas of high need[^aihw_qim]. The QIMs are not designed to assess individual general practices or general practitioner performance. 
 
 [^aihw_qim]: "[Practice Incentives Program Quality Improvement Measures: annual data update 2024-2025](https://www.aihw.gov.au/reports/primary-health-care/pipqi-measures-2024-25/contents/introduction)", Australian Institute of Health and Welfare (AIHW), Australian Government
 
-General practices are incentivised, through Practice Incentive Program payments, to report Quality Improvement Measures to Primary Health Networks. As of 2024--2025 General practices have *not* been incentivised to meet any specified performance level in any of the Quality Improvement Measures.
+General practices receive payments to report their Quality Improvement Measures to the Primary Health Networks, but currently receive no payment for improving their scores. Primary Health Networks *do* report to participating general practices their Quality Improvement Measures scores relative to the other general practices within the same Primary Health Network.
 
-Data derived from Cubiko Touchstone, February 2026[^cubiko].
+This paper compares Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill 80% or more of consultations ('bulk-billing' practices) and other 'mixed-billing' practices during the time period July 2024 to June 2025.
 
-[^cubiko]: "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/). Touchstone used data from 811 general practices. At the time, 24% of those practices were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'.
+Practice data derived from Cubiko[^cubiko] Touchstone, February 2026. As of 2025, Cubiko Touchstone draws upon data from 1048 Australian general practices[^hotn2025].
 
-## Results
+[^cubiko]: "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/). At the time of the 2023 report, 24% of practices contributing to Cubiko Touchstone data were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'. The "Health of the Nation 2025" report by the RACGP notes that the bulk-billing rate remained relatively steady in the Touchstone dataset throughout 2023 and 2024.
 
-### Quality improvement measure performance is similar between predominantly bulk-billing clinics and 'other' clinics
+[^hotn2025]: "Health of the Nation 2025", Royal Australian College of General Practitioners (RACGP), 2025.
 
-Quality Improvement Measure performance for predominantly bulk-billing clinics is broadly similar to 'other' clinics which privately bill more patients. The box-plot interquartile range distribution of bulk-billing clinics and 'other' clinics overlap closely across virtually every QIM and Modified Monash Model area. Generally, the top 10th centile of predominantly bulk-billling clinics perform better than the 25th centile of 'other' clinics, the top 25th centile of bulk-billing clinics perform better than the 50th centile (median) of 'other' etc., and vice versa. Medians are nearly identical. This is the case both overall (@fig-mmm-all-qim-mean) and for most individual QIMs (@fig-mmm-all-qim-all). 
+## Results and Discussion
 
-The statistics for a set of more homogenous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for predominantly bulk-billing clinics and 'other' clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
+### Quality improvement measure performance is similar between bulk-billing clinics and mixed-billing clinics
 
-### Characteristics of quality improvement measures where predominantly bulk-billing clinics tend to perform better (or worse) than 'other' clinics
+Quality Improvement Measure (QIM) performance for bulk-billing clinics is broadly similar to mixed-billing clinics. Bulk-billing and mixed-billing clinics perform at similar levels across nearly all quality measures. The overlap in performance is substantial and the median scores nearly identical. This is the case both overall (@fig-mmm-all-qim-mean) and for most individual QIMs (@fig-mmm-all-qim-all).
 
-Predominantly bulk-billing clinics tend to perform better than 'other' clinic at quality improvement measures which involve brief and non-invasive screening and measurement e.g. smoking (QIM 2) and alcohol history (QIM 7),  weight and height measurement (QIM 3) and measuring the blood pressure of those who have diabetes (QIM 10).
+For example, the top 10th centile of predominantly bulk-billling clinics perform better than the 25th centile of mixed-billing clinics, the top 25th centile of bulk-billing clinics perform better than the 50th centile (median) of mixed-billing clinics etc., and vice versa.
 
-Predominantly bulk-billing clinics perform comparatively worse than 'other' clinics at quality improvement measures requiring more patient time or discussion or persuasion, are more invasive procedures and/or more clinician time consuming.
+The statistics for a set of more homogenous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for bulk-billing clinics and mixeed-billing clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
 
-Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures might reduce health care screening activities and chronic disease management activities[^paul]. Dedicated time for quality improvement from empowered clinicians is important for effective participation, planning and conducting quality improvement activities[^Deilkås].
+### Characteristics of quality improvement measures where bulk-billing clinics tend to perform better - or worse - than mixed-billing clinics
+
+Bulk-billing clinics tend to perform better than mixed-billing clinics at quality improvement measures which involve brief and non-invasive screening and measurement.
+
+Bulk-billing clinics perform comparatively worse than mixed-billing clinics at quality improvement measures requiring more patient time or discussion or persuasion, are more invasive procedures and/or more time consuming for the clinician.
+
+QIMs which involve relatively brief and non-invasive activities include smoking history (QIM 2), alcohol history (QIM 7), weight and height measurement (QIM 3) and measuring the blood pressure of those who live with diabetes (QIM 10).
+
+More invasive and time-consuming - for patient and/or clinician - QIMs include blood-tests to measure glycaemic control in diabetics (QIM 1) and taking measurements - including blood cholesterol etc. - for cardiovascular risk assessment (QIM 8). The use of injectable therapeutics such as influenza vaccination (QIMs 4, 5 and 6) are both time consuming and invasive. Cervical screening (QIM 9) is even more time consuming and invasive. 
+
+Structural factors - not clinic quality - likely explain why bulk-billing clinic underperform on some time-intensive QIMs. Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures reduce health care screening activities and chronic disease management activities[^paul].
 
 [^valentin]: "Bridging inequity gaps in healthcare through tailored support: implementation perspectives of the Social Health Bridge-Building Programme", Valentin et al, 2025 Feb. *BMC Health Services Research* **25**:208. https://doi.org/10.1186/s12913-025-12359-8
 
@@ -75,19 +108,15 @@ Low patient resources and cultural or social distance can reduce the effectivene
 
 [^paul]: "Access to chronic disease care in general practice: the acceptability of implementing systematic waiting-room screening using computer-based patient-reported risk status.", Paul et al, 2013. *The British journal of general practice : the journal of the Royal College of General Practitioners*, **63**(614), e620–e626. https://doi.org/10.3399/bjgp13X671605
 
-[^Deilkås]: "Physician participation in quality improvement work - interest and opportunity: a cross-sectional survey", Deilkås et al, 2022. *BMC primary care*, **23**(1), 267. https://doi.org/10.1186/s12875-022-01878-6
-
-Slightly invasive and time-consuming (for patient and/or clinician) QIMs include taking blood to measure glycaemic control in diabetics (QIM 1) and taking measurements - including cholesterol etc. - for cardiovascular risk assessment (QIM 8).
-
-Slightly more time consuming and - in the view of some - invasive is the use of injectable therapeutics such as influenza vaccination (QIM 4, 5, 6). Higher vaccination rates in a clinic can also be dependent on expenditure of clinic time and resources e.g. sending out targeted patient reminders (and using resources to plan to do so), employment of a clinic nurse and clinic nurse time to review eligible patient population in the daily appointment book.
-
 Influenza vaccination rates also varies with socioeconomic status. Cultural, linguistic and socioeconomic characteristics - including education and income - strongly influence influenza vaccination uptake among schoolchildren[^le]. Bulk-billing rates are higher in regions with the most socioeconomically disadvantaged quintile [^saxby].
 
 [^le]: "Socio-economic inequality underpins inequity in influenza vaccination uptake between public and private secondary schools: an Australian population-based study", Le et al, 2025. *The Lancet Regional Health. Western Pacific* **65**, 101761. https://doi.org/10.1016/j.lanwpc.2025.101761
 
 [^saxby]: "Bulk-billing rates and out-of-pocket costs for general practitioner services in Australia, 2022, by SA3 region: analysis of Medicare claims data", Saxby and Zhang, 2024. *Medical Journal of Australia* **222**(3):144--148
 
-Even more time consuming and - in the view of some - more invasive again is cervical screening (QIM 9). Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socio-economic disadvantage[^aihw_cst].   Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman] and male doctors are more likely to bulk-bill [^ochre].
+Influenza vaccination rates in a clinic is improved by expenditure of clinic time and resources e.g. sending out targeted patient reminders (and using resources to plan to do so), employment of a clinic nurse and clinic nurse time to review eligible patient population in the daily appointment book.
+
+Cervical screening in a clinic is also improved by use of clinic time and resources by planning for and sending out targeted reminders. Participation in cervical screening decreases with increasing socioeconomic disadvantage[^aihw_cst].   Additionally, cervical screening is a 'gendered' intervention. Patients of male doctors have lower cervical screening rates[^haas] [^incecushman]. Male doctors are more likely to bulk-bill [^ochre]. The lower performance of bulk-billing clinics in cervical screening could be the result of an intersection between gender, billing incentives and workforce composition.
 
 [^aihw_cst]: "National Cervical Screening Program monitoring report 2025", *Australian Institute of Health and Welfare (AIHW)*, Australian Government, 2025, accessed 24 February 2026. https://www.aihw.gov.au/reports/cancer-screening/ncsp-monitoring-report-2025/
 
@@ -97,7 +126,15 @@ Even more time consuming and - in the view of some - more invasive again is cerv
 
 [^ochre]: "[Insights into gender paygap amongst General Practitioners in Australia: An Ochre Health Study](https://ochrehealth.com.au/wp-content/uploads/2025/11/Paper-Insights-into-gender-paygap-amongst-general-pracitioners-An-Ochre-Health-study-May-2025.pdf)", Ochre Health Pty Ltd., April 2025.  
 
+Dedicated funding for practice nurse time, targeted patient recall systems, and chronic disease care coordinators at predominantly bulk-billing practices working with low resource populations could address the structural barriers of high workload, cultural distance, multiple morbidity and limited consultation time contributing to reduced performance in quality improvement measures which require additional time and discussion. Dedicated time for quality improvement from empowered clinicians is important for effective participation, planning and conducting quality improvement activities[^Deilkås].
+
+[^Deilkås]: "Physician participation in quality improvement work - interest and opportunity: a cross-sectional survey", Deilkås et al, 2022. *BMC primary care*, **23**(1), 267. https://doi.org/10.1186/s12875-022-01878-6
+
+Workforce data on GP gender distribution by socioeconomic region and billing type would help clarify whether this explains the relatively poor cervical screening performance of bulk-billing clinics. Targeted incentives for female clinicians in predominantly bulk-billing settings could close the inequity.
+
 ### Quality improvement measures and rurality (Modified Monash Model areas)
+
+Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance appears to *increase* for bulk-billing practices in MMM4 compared to MMM1 (@fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN). MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN.
 
 The Modified Monash Model (MMM) defines whether a location is metropolitan, rural, remote or very remote[^mmm]. The MMM has been designed to designate areas of increasing disadvantage due to poor access to healthcare and increased healthcare needs, e.g. related with low socioeconomic status[^mcgrail] [^versace]. The Modified Monash Model is used to determine eligibility for health workforce programs, including increased bulk-billing incentives[^gphotn2024].
 
@@ -119,7 +156,7 @@ MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA
 
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
-Quality Improvement Measure performance is compared across MMM areas in @fig-mmm-all-qim-mean-comparison. Quality Improvement Measure performance is compared across the several MMM areas within a single primary health network (HNECCPHN) in @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison. Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance in both comparisons appears to *increase* for predominantly bulk-billing practices in MMM4 compared to MMM1 (both @fig-mmm-all-qim-mean-comparison and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison). MMM 5/6 QIM performance for predominantly bulk-billing practices is less than MMM 4 QIM performance both Australia-wide and also within the HNECCPHN. It is a potential avenue for future data exploration whether predominantly bulk-billing practices on either side of MMM boundaries have different QIM performance potentially attributable to different financial and workforce incentives (a 'natural experiment' into the effect of different incentives on QIM performance). 
+A potential natural experiment exists at MMM boundaries where similar practices bulk-billing practices on either side of MMM boundaries face different financial and workforce incentives. Differing QIM performance across MMM boundaries is potentially attributable to the difference in those incentives.
 
 ### Comparing quality improvement measures between primary health networks in relatively low and high socioeconomic areas
 
@@ -133,9 +170,13 @@ Quality Improvement Measure outcomes such as cervical screening and influenza va
 
 [^swsphn]: Not enough South West Sydney MMM1 practice data is available from Cubiko for comparison statistics. The addition of MMM 2+3 to the South West Sydney PHN statistics is of interest, but has less validity than comparing purely MMM1 areas.
 
-Contrary to expectations, practices from NWMPHN, both predominantly bulk-billing and 'other' billing, appear to have better Quality Improvement Measure performance than their counterparts working in the generally more socio-economically advantaged EMPHN (@fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison). Likewise, WentWest practices, both predominantly bulk-billing and 'other' billing, appear to have better Quality Improvement Measure performance than their Sydney North counterparts (@fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison) (due to different range in MMMs, the South West Sydney and Sydney North PHN statistics are not as directly comparable).
+Contrary to expectations, practices from NWMPHN, both bulk-billing and mixed-billing, appear to have better Quality Improvement Measure performance than their counterparts working in the generally more socio-economically advantaged EMPHN (@fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison). Likewise, WentWest practices, both bulk-billing and mixed-billing, appear to have better Quality Improvement Measure performance than their Sydney North counterparts (@fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison) (due to different range in MMMs, the South West Sydney and Sydney North PHN statistics are not as directly comparable).
 
-There is no obvious explanation for the unexpected finding that practices with low-resource populations have better QIM outcomes than practices from high-resource populations. Perhaps large proportions of primary care general practices in higher resource populations have 'specialised' into activities such as cosmetic medicine, and have reduced emphasis on 'basic' primary care activities such as weight measurement, taking an alcohol history and checking the blood pressure of patients living with diabetes. Perhaps practices in higher resource populations have a generally higher profit motive, which is associated with poorer quality outcomes[^brosig-koch]. Practices with low-resource populations might be more accustomed to encountering patients with chronic conditions and practices with high-resource populations might see more patients with minor acute conditions, e.g upper respiratory tract infections (Valenti et al, 2016). There is no readily available literature evidence that practice familiarity with chronic conditions in low socioeconomic status populations offsets the time consuming nature of practice when working with patients with multiple morbidity and low resources.
+There is no obvious explanation for the unexpected finding that practices with low-resource populations have better QIM outcomes than practices from high-resource populations.
+
+Practices with low-resource populations might be more accustomed to encountering patients with chronic conditions and practices with high-resource populations might see more patients with minor acute conditions, e.g upper respiratory tract infections (Valenti et al, 2016). It is unclear from existing literature whether clinicians working with low socioeconomic populations develop efficiencies that offset the demands of working with patients with multiple morbidity and low resources.
+
+Perhaps significant proportions of primary care general practices in higher resource populations have 'specialised' into activities such as cosmetic medicine, and have reduced emphasis on 'basic' primary care activities such as weight measurement, taking an alcohol history and checking the blood pressure of patients living with diabetes. Perhaps practices in higher resource populations have a generally higher profit motive, which is associated with poorer quality outcomes[^brosig-koch]. It may be that PHN-level chronic disease performance may be degraded not by poverty or workload, but by market specialisation in wealthier areas. Research into practice orientation in high socioeconomic areas could consider whether current incentive structures inadvertently allow high income area practices to opt out of chronic disease care.
 
 [^brosig-koch]: "A new look at physicians’ responses to financial incentives: Quality of care, practice characteristics, and motivations", Brosig-Koch et al, 2024. *Journal of Health Economics* **94**, March 2024, 102862. https://doi.org/10.1016/j.jhealeco.2024.102862
 
@@ -183,7 +224,7 @@ df_wide <- df %>%
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-mmm-all-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, 10 QIMs"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, 10 QIMs"
 # 1) Filter to MMM = "All", PHN = "All" and prepare labels
 df_box <- df_wide %>%
   filter(MMM == "All", PHN == "All") %>%
@@ -214,9 +255,9 @@ ggplot(
     width = 0.65,
     alpha = 0.9
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other" # title in Quarto figure caption
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed" # title in Quarto figure caption
     subtitle = "Subset: MMM = All, PHN = All\nbox = 25th– 50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
@@ -234,7 +275,7 @@ ggplot(
 
 ```{r}
 #| label: fig-mmm-all-qim-mean
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Mean centiles"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, Mean centiles"
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
 
@@ -268,9 +309,9 @@ ggplot(
   )
 ) +
   geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill 80+% vs Mixed",
     subtitle = "Mean centiles across all 10 QIMs (MMM = All, PHN = All)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = NULL,
     y = "Proportion (%)",
@@ -288,7 +329,7 @@ ggplot(
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-mmm-1-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, MMM 1"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, MMM 1"
 
 # 1) Filter to MMM = "1", PHN = "All" and prepare labels
 df_box <- df_wide %>%
@@ -319,9 +360,9 @@ ggplot(
     width = 0.65,
     alpha = 0.9
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Subset: MMM = 1, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
@@ -341,9 +382,9 @@ ggplot(
 
 ```{r}
 #| label: fig-mmm-all-qim-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, MMM comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, MMM comparison"
 # compare MMM areas
-# within each MMM, compare 'BB 80+' and 'Other'
+# within each MMM, compare 'BB 80+' and mixed-billing
 # 1) Subset to PHN = "All", exclude MMM = "All"
 df_sub <- df_wide %>%
   filter(PHN == "All", MMM != "All")
@@ -364,7 +405,7 @@ df_avg <- df_sub %>%
 df_avg <- df_avg %>%
   mutate(MMM = factor(MMM, levels = paste0("MMM", 1:6)))
 
-# 4) Plot: all MMMs on one row, BB 80+ and Other dodged within each MMM
+# 4) Plot: all MMMs on one row, BB 80+ and Mixed dodged within each MMM
 ggplot(
   df_avg,
   aes(
@@ -383,9 +424,9 @@ ggplot(
     alpha    = 0.9,
     position = position_dodge(width = 0.6)
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title    = "Quality Improvement Measures: Bulk-Bill 80+% vs Other by MMM",
+    # title    = "Quality Improvement Measures: Bulk-Bill 80+% vs Mixed by MMM",
     subtitle = "Mean centiles across all QIMs (PHN = All)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x        = "MMM",
     y        = "Proportion (%)",
@@ -401,13 +442,13 @@ ggplot(
 
 ```{r}
 #| label: fig-mmm-all-qim-weighted-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, MMM weighted mean[^weighted_mean] comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, MMM weighted mean[^weighted_mean] comparison"
 # compare MMM areas with weighted means
 
 # three QIMS (4, 5, 6) are all influenza vaccination, given very high weighting to those statistics. It is even possible for the same vaccination in an individual to be 'counted' in all three QIMs (if the patient is a 65+ year old with diabetes and COPD)
 # overall, the 'weighting' of QIMs (even if not deliberately emphasised or de-emphasised) is somewhat arbitrary since the QIM distribution doesn't necessarily reflect clinical importance
 
-# within each MMM, compare 'BB 80+' and 'Other'
+# within each MMM, compare 'BB 80+' and mixed-billing
 # 1) Subset to PHN = "All", exclude MMM = "All"
 df_sub <- df_wide %>%
   filter(PHN == "All", MMM != "All") %>%
@@ -430,7 +471,7 @@ df_avg <- df_sub %>%
 df_avg <- df_avg %>%
   mutate(MMM = factor(MMM, levels = paste0("MMM", 1:6)))
 
-# 4) Plot: all MMMs on one row, BB 80+ and Other dodged within each MMM
+# 4) Plot: all MMMs on one row, BB 80+ and Mixed dodged within each MMM
 ggplot(
   df_avg,
   aes(
@@ -449,9 +490,9 @@ ggplot(
     alpha    = 0.9,
     position = position_dodge(width = 0.6)
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title    = "Quality Improvement Measures: Bulk-Bill 80+% vs Other by MMM",
+    # title    = "Quality Improvement Measures: Bulk-Bill 80+% vs Mixed by MMM",
     subtitle = "Weighted mean centiles across all QIMs (PHN = All)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x        = "MMM",
     y        = "Proportion (%)",
@@ -471,7 +512,7 @@ ggplot(
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-mmm-1-phn-nwmphn-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, NWMPHN"
 # 1) Filter to MMM = "1", PHN = "NWMPHN" and prepare labels
 df_box <- df_wide %>%
   filter(MMM == "MMM1", PHN == "NWMPHN") %>%
@@ -501,9 +542,9 @@ ggplot(
     width = 0.65,
     alpha = 0.9
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Subset: MMM = 1, PHN = NWMPHN\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
@@ -521,7 +562,7 @@ ggplot(
 
 ```{r}
 #| label: fig-mmm-1-phn-nwmphn-qim-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN, mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, NWMPHN, mean comparison"
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
 
@@ -555,9 +596,9 @@ ggplot(
   )
 ) +
   geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Mean centiles across all 10 QIMs (MMM = 1, PHN = NWMPHN)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = NULL,
     y = "Proportion (%)",
@@ -575,7 +616,7 @@ ggplot(
 
 ```{r}
 #| label: fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN vs EMPHN, weighted mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, NWMPHN vs EMPHN, weighted mean comparison"
 # compare NWMPHN to EMPHN
 
 # df_wide columns assumed:
@@ -584,17 +625,17 @@ ggplot(
 # three QIMS (4, 5, 6) are all influenza vaccination, given very high weighting to those statistics. It is even possible for the same vaccination in an individual to be 'counted' in all three QIMs (if the patient is a 65+ year old with diabetes and COPD)
 # overall, the 'weighting' of QIMs (even if not deliberately emphasised or de-emphasised) is somewhat arbitrary since the QIM distribution doesn't necessarily reflect clinical importance
 
-# within each MMM, compare 'BB 80+' and 'Other'
+# within each MMM, compare 'BB 80+' and mixed-billing
 # 1) Subset to PHN = "All", exclude MMM = "All"
 df_sub <- df_wide %>%
   filter(
     PHN %in% c("NWMPHN", "EMPHN"),
     MMM == "MMM1",
-    Billing %in% c("BB 80+", "Other")
+    Billing %in% c("BB 80+", "Mixed")
   ) %>%
   mutate(
     PHN = factor(PHN, levels = c("NWMPHN", "EMPHN")),
-    Billing = factor(Billing, levels = c("BB 80+", "Other"))
+    Billing = factor(Billing, levels = c("BB 80+", "Mixed"))
   ) %>%
   # assign 1/3 (one-third) weights to vaccination QIMs
   mutate(qim_weight = if_else(QIM %in% c(4, 5, 6), 1/3, 1))
@@ -614,7 +655,7 @@ df_avg <- df_sub %>%
 # Ensure one row per box
 stopifnot(all(dplyr::count(df_avg, PHN, Billing)$n == 1))
 
-# 3) Plot: two facets (BB 80+ | Other), each showing the three MMMs
+# 3) Plot: two facets (BB 80+ | Mixed), each showing the three MMMs
 ggplot(
   df_avg,
   aes(
@@ -647,7 +688,7 @@ ggplot(
 
 ```{r, fig.height=10, fig.width=6.5}
 #| label: fig-phn-nwmphn-emphn-mmm-1-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN vs EMPHN, all QIMs"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, NWMPHN vs EMPHN, all QIMs"
 
 # Compare all QIMs for two PHNs
 #   NWMPHN, EMPHN
@@ -655,12 +696,12 @@ ggplot(
 df_box <- df_wide %>%
   filter(
     PHN %in% c("NWMPHN", "EMPHN"),
-    Billing %in% c("BB 80+", "Other")
+    Billing %in% c("BB 80+", "Mixed")
   ) %>%
   mutate(
     QIM_label = paste0(QIM, ". ", `QIM description`),
     QIM_label = fct_reorder(QIM_label, QIM),
-    Billing   = factor(Billing, levels = c("BB 80+", "Other")),
+    Billing   = factor(Billing, levels = c("BB 80+", "Mixed")),
     PHN       = factor(PHN, levels = c("NWMPHN", "EMPHN"))
   ) %>%
   # 2) Ensure exactly one row per (QIM × Billing × PHN) for identity boxplots
@@ -704,7 +745,7 @@ ggplot(
   scale_x_discrete(
     labels = function(x) {
       # Turn "BB 80+ . PHN" into "BB 80+ | PHN"
-      str_replace(x, "^(BB 80\\+|Other)\\.(NWMPHN|EMPHN)$", "\\1 | \\2")
+      str_replace(x, "^(BB 80\\+|Mixed)\\.(NWMPHN|EMPHN)$", "\\1 | \\2")
     }
   ) +
   scale_fill_manual(values = c(
@@ -732,7 +773,7 @@ ggplot(
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-wentwest-mmm-1-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, WentWest"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, WentWest"
 
 # 1) Filter to MMM = "1", PHN = "WentWest" and prepare labels
 df_box <- df_wide %>%
@@ -763,9 +804,9 @@ ggplot(
     width = 0.65,
     alpha = 0.9
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Subset: MMM = 1, PHN = West Sydney\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
@@ -782,7 +823,7 @@ ggplot(
 
 ```{r}
 #| label: fig-phn-wentwest-mmm-1-qim-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, NWMPHN vs EMPHN, weighted mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, NWMPHN vs EMPHN, weighted mean comparison"
 
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
@@ -817,9 +858,9 @@ ggplot(
   )
 ) +
   geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Mean centiles across all 10 QIMs (MMM = 1, PHN = West Sydney)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = NULL,
     y = "Proportion (%)",
@@ -837,7 +878,7 @@ ggplot(
 
 ```{r}
 #| label: fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, WentWest (MMM 1) vs SWSPHN (MMM 1, 2, 3)[^SWSPHN_MMM13] vs SydneyNorth (MMM1), weighted mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, WentWest (MMM 1) vs SWSPHN (MMM 1, 2, 3)[^SWSPHN_MMM13] vs SydneyNorth (MMM1), weighted mean comparison"
 
 # compare WentWest to SWSPHN and SydneyNorth
 # df_wide columns assumed:
@@ -847,11 +888,11 @@ ggplot(
 df_sub <- df_wide %>%
   filter(
     PHN %in% c("WentWest", "SWSPHN", "SydneyNorth"),
-    Billing %in% c("BB 80+", "Other")
+    Billing %in% c("BB 80+", "Mixed")
   ) %>%
   mutate(
     PHN = factor(PHN, levels = c("WentWest", "SWSPHN", "SydneyNorth")),
-    Billing = factor(Billing, levels = c("BB 80+", "Other"))
+    Billing = factor(Billing, levels = c("BB 80+", "Mixed"))
   ) %>%
   # assign 1/3 (one-third) weights to vaccination QIMs
   # otherwise influenza vaccination is (arguably) over-represented
@@ -875,7 +916,7 @@ df_avg <- df_sub %>%
 # Ensure one row per box
 stopifnot(all(dplyr::count(df_avg, PHN, Billing)$n == 1))
 
-# 3) Plot: two facets (BB 80+ | Other), each showing the three MMMs
+# 3) Plot: two facets (BB 80+ | Mixed), each showing the three MMMs
 ggplot(
   df_avg,
   aes(
@@ -906,23 +947,23 @@ ggplot(
   )
 ```
 
-[^SWSPHN_MMM13]: Not enough Cubiko data for general practices in SWSPHN MMM1 (or even MMM 1+2) to compare bulk-billing and 'other' billing practices in SWSPHN MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area. Comparison of statistics from MMM 1+2+3 SWSPHN practices with practices from MMM 1 practices from a different PHN should be done with caution.
+[^SWSPHN_MMM13]: Not enough Cubiko data for general practices in SWSPHN MMM1 (or even MMM 1+2) to compare bulk-billing and mixed-billing practices in SWSPHN MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area. Comparison of statistics from MMM 1+2+3 SWSPHN practices with practices from MMM 1 practices from a different PHN should be done with caution.
 
 ```{r, fig.height=10, fig.width=6.5}
 #| label: fig-phn-wentwest-swsphn-sydneynorth-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, WentWest (MMM 1) vs SWSPHN (MMM 1, 2, 3) vs SydneyNorth (MMM1), all QIMs"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, WentWest (MMM 1) vs SWSPHN (MMM 1, 2, 3) vs SydneyNorth (MMM1), all QIMs"
 # Compare all QIMs for the three PHNS
 #   WentWest, SWSPHN, SydneyNorth
 # 1) Filter to PHN, Billing, build QIM labels
 df_box <- df_wide %>%
   filter(
     PHN %in% c("WentWest", "SWSPHN", "SydneyNorth"),
-    Billing %in% c("BB 80+", "Other")
+    Billing %in% c("BB 80+", "Mixed")
   ) %>%
   mutate(
     QIM_label = paste0(QIM, ". ", `QIM description`),
     QIM_label = fct_reorder(QIM_label, QIM),
-    Billing   = factor(Billing, levels = c("BB 80+", "Other")),
+    Billing   = factor(Billing, levels = c("BB 80+", "Mixed")),
     PHN       = factor(PHN, levels = c("WentWest", "SWSPHN", "SydneyNorth"))
   ) %>%
   # 2) Ensure exactly one row per (QIM × Billing × PHN) for identity boxplots
@@ -966,7 +1007,7 @@ ggplot(
   scale_x_discrete(
     labels = function(x) {
       # Turn "BB 80+ . PHN" into "BB 80+ | PHN"
-      str_replace(x, "^(BB 80\\+|Other)\\.(WentWest|SWSPHN|SydneyNorth)$", "\\1 | \\2")
+      str_replace(x, "^(BB 80\\+|Mixed)\\.(WentWest|SWSPHN|SydneyNorth)$", "\\1 | \\2")
     }
   ) +
   scale_fill_manual(values = c(
@@ -995,7 +1036,7 @@ ggplot(
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-tasmania-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Tasmania (MMM 1+2+3)[^Tasmania_MMM123], QIM all"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, Tasmania (MMM 1+2+3)[^Tasmania_MMM123], QIM all"
 # 1) Filter to MMM = "1", PHN = "WentWest" and prepare labels
 df_box <- df_wide %>%
   filter(MMM == "MMM1to3", PHN == "Tasmania") %>%
@@ -1025,9 +1066,9 @@ ggplot(
     width = 0.65,
     alpha = 0.9
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Subset: MMM = 1+2+3, PHN = Tasmania\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
@@ -1043,11 +1084,11 @@ ggplot(
 
 ```
 
-[^Tasmania_MMM123]: Not enough Cubiko data for general practices in Tasmania MMM1 (or even MMM 1+2) to compare bulk-billing and 'other' billing practices in Tasmania MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area.
+[^Tasmania_MMM123]: Not enough Cubiko data for general practices in Tasmania MMM1 (or even MMM 1+2) to compare bulk-billing and mixed-billing practices in Tasmania MMM1. The nature of practices in a range of MMM areas is expected to be more heterogenous than practices from a single MMM area.
 
 ```{r}
 #| label: fig-phn-tasmania-qim-mean
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, Tasmania (MMM 1+2+3), mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, Tasmania (MMM 1+2+3), mean comparison"
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
 
@@ -1081,9 +1122,9 @@ ggplot(
   )
 ) +
   geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Mean centiles across all 10 QIMs (MMM = 1+2+3, PHN = Tasmania)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = NULL,
     y = "Proportion (%)",
@@ -1101,7 +1142,7 @@ ggplot(
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-hneccphn-mmm-1-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, HNECCPHN (MMM 1), all QIMs"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, HNECCPHN (MMM 1), all QIMs"
 
 # 1) Filter to MMM = "1", PHN = "HNECCPHN" and prepare labels
 df_box <- df_wide %>%
@@ -1132,9 +1173,9 @@ ggplot(
     width = 0.65,
     alpha = 0.9
   ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Subset: MMM = 1, PHN = HNECCPHN\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
@@ -1152,7 +1193,7 @@ ggplot(
 
 ```{r}
 #| label: fig-phn-hneccphn-mmm-1-qim--mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, HNECCPHN (MMM 1), mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, HNECCPHN (MMM 1), mean comparison"
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
 
@@ -1186,9 +1227,9 @@ ggplot(
   )
 ) +
   geom_boxplot(stat = "identity", width = 0.45, alpha = 0.9) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Other" = "#ff7f0e")) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other",
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
     subtitle = "Mean centiles across all 10 QIMs (MMM = 1, PHN = HNECCPHN)\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = NULL,
     y = "Proportion (%)",
@@ -1206,7 +1247,7 @@ ggplot(
 
 ```{r, fig.width=6.5}
 #| label: fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Other, HNECCPHN, MMM zones, weighted mean comparison"
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, HNECCPHN, MMM zones, weighted mean comparison"
 # compare three MMM groups in HNECCPHN
 # df_wide columns assumed:
 # Billing, MMM, PHN, QIM, `QIM description`, p10, p25, p50, p75, p90
@@ -1216,11 +1257,11 @@ df_sub <- df_wide %>%
   filter(
     PHN == "HNECCPHN",
     MMM %in% c("MMM1", "MMM2to4", "MMM5"),
-    Billing %in% c("BB 80+", "Other")
+    Billing %in% c("BB 80+", "Mixed")
   ) %>%
   mutate(
     MMM = factor(MMM, levels = c("MMM1", "MMM2to4", "MMM5")),
-    Billing = factor(Billing, levels = c("BB 80+", "Other"))
+    Billing = factor(Billing, levels = c("BB 80+", "Mixed"))
   ) %>%
   # assign 1/3 (one-third) weights to vaccination QIMs
   # otherwise influenza vaccination is (arguably) over-represented
@@ -1244,7 +1285,7 @@ df_avg <- df_sub %>%
 # Ensure one row per box
 stopifnot(all(dplyr::count(df_avg, MMM, Billing)$n == 1))
 
-# 3) Plot: two facets (BB 80+ | Other), each showing the three MMMs
+# 3) Plot: two facets (BB 80+ | Mixed), each showing the three MMMs
 ggplot(
   df_avg,
   aes(
@@ -1280,13 +1321,13 @@ ggplot(
 df_box <- df_wide %>%
   filter(
     PHN == "HNECCPHN",
-    Billing %in% c("BB 80+", "Other"),
+    Billing %in% c("BB 80+", "Mixed"),
     MMM %in% c("MMM1", "MMM2to4", "MMM5")
   ) %>%
   mutate(
     QIM_label = paste0(QIM, ". ", `QIM description`),
     QIM_label = fct_reorder(QIM_label, QIM),
-    Billing   = factor(Billing, levels = c("BB 80+", "Other")),
+    Billing   = factor(Billing, levels = c("BB 80+", "Mixed")),
     MMM       = factor(MMM,     levels = c("MMM1", "MMM2to4", "MMM5"))
   ) %>%
   # 2) Ensure exactly one row per (QIM × Billing × MMM) for identity boxplots
@@ -1330,7 +1371,7 @@ ggplot(
   scale_x_discrete(
     labels = function(x) {
       # Turn "BB 80+ . MMM1" into "BB 80+ | MMM1"
-      str_replace(x, "^(BB 80\\+|Other)\\.(MMM1|MMM2to4|MMM5)$", "\\1 | \\2")
+      str_replace(x, "^(BB 80\\+|Mixed)\\.(MMM1|MMM2to4|MMM5)$", "\\1 | \\2")
     }
   ) +
   scale_fill_manual(values = c(
