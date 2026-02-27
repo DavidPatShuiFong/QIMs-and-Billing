@@ -10,18 +10,18 @@ abstract: |
   Improvement Measures (QIMs). Medians are nearly identical and performance distributions
   overlap closely across most QIMs and geographic areas.
   
-  Where differences exist, they follow a consistent pattern: bulk-billing practices perform
-  better on brief, non-invasive measures such as recording smoking status, alcohol history
-  and weight. They perform compartively worse on measures requiring more clinician time or
-  procedures - such as measuring glycaemic control in diabetes, influenza immunisation and
-  particularly cervical screening. Structural factors, including time pressure, patients
-  living with low socioeconomic resources, multiple morbidity, cultural distance and 
-  scarcity of same-gendered clinicians are plausible explanataions.
+  Where differences exist, they follow a consistent pattern: bulk-billing practices
+  perform better on brief, non-invasive measures such as recording smoking status, alcohol
+  history and weight. They perform compartively worse on measures requiring more clinician
+  time or procedures - such as measuring glycaemic control in diabetes, influenza
+  immunisation particularly cervical screening. Structural factors, including time
+  pressure, patients living with low socioeconomic resources, multiple morbidity, cultural
+  distance and scarcity of same-gendered clinicians are plausible explanations.
   
   Contrary to expectations, practices in primary health networks with lower socioeconomic
-  populations - including North West Melbourne and Western Sydney - outperform those in more
-  advantaged primary health networks in the same cities. The reasons are unclear and warrant
-  further investigation.
+  populations - including North West Melbourne and Western Sydney - outperform those in
+  advantaged primary health networks in the same cities. The reasons are unclear and
+  warrant further investigation.
   
   Targeted support for time-intensive chronic diseases at practices with high-need and
   disadvantaged populations represent the clearest policy opportunity identified
