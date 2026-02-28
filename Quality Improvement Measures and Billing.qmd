@@ -5,21 +5,22 @@ date: 27 February 2026
 date-format: long
 author: Dr David P.S. Fong
 abstract: |
-  General practices that predominatly bulk-bill (80% or more of consultations) perform at
+  General practices that predominantly bulk-bill (80% or more of consultations) perform at
   broadly similar levels to other practices across Australia's ten chronic disease Quality
   Improvement Measures (QIMs). Medians are nearly identical and performance distributions
   overlap closely across most QIMs and geographic areas.
   
   Where differences exist, they follow a consistent pattern: bulk-billing practices
   perform better on brief, non-invasive measures such as recording smoking status, alcohol
-  history and weight. They perform compartively worse on measures requiring more clinician
-  time or procedures - such as measuring glycaemic control in diabetes, influenza
+  history and weight. They perform comparatively worse on measures requiring more clinician
+  time or procedures -- such as measuring glycaemic control in diabetes, influenza
   immunisation particularly cervical screening. Structural factors, including time
   pressure, patients living with low socioeconomic resources, multiple morbidity, cultural
-  distance and scarcity of same-gendered clinicians are plausible explanations.
+  distance and scarcity of same-gendered clinicians are plausible explanations for
+  bulk-billing practices performing comparatively worse on some QIM measures.
   
   Contrary to expectations, practices in primary health networks with lower socioeconomic
-  populations - including North West Melbourne and Western Sydney - outperform those in
+  populations -- including North West Melbourne and Western Sydney -- outperform those in
   advantaged primary health networks in the same cities. The reasons are unclear and
   warrant further investigation.
   
@@ -84,9 +85,9 @@ Quality Improvement Measure (QIM) performance for bulk-billing clinics is broadl
 
 For example, the top 10th centile of predominantly bulk-billling clinics perform better than the 25th centile of mixed-billing clinics, the top 25th centile of bulk-billing clinics perform better than the 50th centile (median) of mixed-billing clinics etc., and vice versa.
 
-The statistics for a set of more homogenous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for bulk-billing clinics and mixeed-billing clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
+The statistics for a set of more homogeneous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for bulk-billing clinics and mixeed-billing clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
 
-### Characteristics of quality improvement measures where bulk-billing clinics tend to perform better - or worse - than mixed-billing clinics
+### Characteristics of quality improvement measures where bulk-billing clinics tend to perform better -- or worse -- than mixed-billing clinics
 
 Bulk-billing clinics tend to perform better than mixed-billing clinics at quality improvement measures which involve brief and non-invasive screening and measurement.
 
@@ -94,21 +95,21 @@ Bulk-billing clinics perform comparatively worse than mixed-billing clinics at q
 
 QIMs which involve relatively brief and non-invasive activities include smoking history (QIM 2), alcohol history (QIM 7), weight and height measurement (QIM 3) and measuring the blood pressure of those who live with diabetes (QIM 10).
 
-More invasive and time-consuming - for patient and/or clinician - QIMs include blood-tests to measure glycaemic control in diabetics (QIM 1) and taking measurements - including blood cholesterol etc. - for cardiovascular risk assessment (QIM 8). The use of injectable therapeutics such as influenza vaccination (QIMs 4, 5 and 6) are both time consuming and invasive. Cervical screening (QIM 9) is even more time consuming and invasive. 
+More invasive and time-consuming -- for patient and/or clinician -- QIMs include blood-tests to measure glycaemic control in diabetics (QIM 1) and taking measurements -- including blood cholesterol etc. -- for cardiovascular risk assessment (QIM 8). The use of injectable therapeutics such as influenza vaccination (QIMs 4, 5 and 6) are both time consuming and invasive. Cervical screening (QIM 9) is even more time consuming and invasive. 
 
-Structural factors - not clinic quality - likely explain why bulk-billing clinic underperform on some time-intensive QIMs. Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures reduce health care screening activities and chronic disease management activities[^paul].
+Structural factors -- not clinic quality -- likely explain why bulk-billing clinic underperform on some time-intensive QIMs. Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures reduce health care screening activities and chronic disease management activities[^paul].
 
 [^valentin]: "Bridging inequity gaps in healthcare through tailored support: implementation perspectives of the Social Health Bridge-Building Programme", Valentin et al, 2025 Feb. *BMC Health Services Research* **25**:208. https://doi.org/10.1186/s12913-025-12359-8
 
 [^alkhamees]: "Patient-physician communication in intercultural settings: An integrative review", Alkhamees and Alasqah, 2023. *Heliyon* **9**(12): e2267. https://doi.org/10.1016/j.heliyon.2023.e22667
 
-[^watt]: "General Practitioners at the Deep End: The experience and views of general practitioners working in the most severely deprived areas of Scotland", Watt et al, 2012. Occasional paper *Royal College of General Practitioners*, 2012(April) (89), i–40.
+[^watt]: "General Practitioners at the Deep End: The experience and views of general practitioners working in the most severely deprived areas of Scotland", Watt et al, 2012. Occasional paper *Royal College of General Practitioners*, 2012(April) (89), i--40.
 
 [^BuffelduVaure]: "Potential workload in applying clinical practice guidelines for patients with chronic conditions and multimorbidity: a systematic analysis" Buffel du Vaure et al, 2016. *BMJ Open* 2016;**6**:e010119. doi: 10.1136/bmjopen-2015-010119
 
-[^paul]: "Access to chronic disease care in general practice: the acceptability of implementing systematic waiting-room screening using computer-based patient-reported risk status.", Paul et al, 2013. *The British journal of general practice : the journal of the Royal College of General Practitioners*, **63**(614), e620–e626. https://doi.org/10.3399/bjgp13X671605
+[^paul]: "Access to chronic disease care in general practice: the acceptability of implementing systematic waiting-room screening using computer-based patient-reported risk status.", Paul et al, 2013. *The British journal of general practice : the journal of the Royal College of General Practitioners*, **63**(614), e620--e626. https://doi.org/10.3399/bjgp13X671605
 
-Influenza vaccination rates also varies with socioeconomic status. Cultural, linguistic and socioeconomic characteristics - including education and income - strongly influence influenza vaccination uptake among schoolchildren[^le]. Bulk-billing rates are higher in regions with the most socioeconomically disadvantaged quintile [^saxby].
+Influenza vaccination rates also varies with socioeconomic status. Cultural, linguistic and socioeconomic characteristics -- including education and income -- strongly influence influenza vaccination uptake among schoolchildren[^le]. Bulk-billing rates are higher in regions with the most socioeconomically disadvantaged quintile [^saxby].
 
 [^le]: "Socio-economic inequality underpins inequity in influenza vaccination uptake between public and private secondary schools: an Australian population-based study", Le et al, 2025. *The Lancet Regional Health. Western Pacific* **65**, 101761. https://doi.org/10.1016/j.lanwpc.2025.101761
 
@@ -158,7 +159,7 @@ MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA
 
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
-A potential natural experiment exists at MMM boundaries where similar practices bulk-billing practices on either side of MMM boundaries face different financial and workforce incentives. Differing QIM performance across MMM boundaries is potentially attributable to the difference in those incentives.
+A potential natural experiment exists at MMM boundaries where similar bulk-billing practices on either side of MMM boundaries face different financial and workforce incentives. Differing QIM performance across MMM boundaries is potentially attributable to the difference in those incentives.
 
 ### Comparing quality improvement measures between primary health networks in relatively low and high socioeconomic areas
 
@@ -172,7 +173,7 @@ Quality Improvement Measure outcomes such as cervical screening and influenza va
 
 [^swsphn]: Not enough South West Sydney MMM1 practice data is available from Cubiko for comparison statistics. The addition of MMM 2+3 to the South West Sydney PHN statistics is of interest, but has less validity than comparing purely MMM1 areas.
 
-Contrary to expectations, practices from NWMPHN, both bulk-billing and mixed-billing, appear to have better Quality Improvement Measure performance than their counterparts working in the generally more socio-economically advantaged EMPHN (@fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison). Likewise, WentWest practices, both bulk-billing and mixed-billing, appear to have better Quality Improvement Measure performance than their Sydney North counterparts (@fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison) (due to different range in MMMs, the South West Sydney and Sydney North PHN statistics are not as directly comparable).
+Contrary to expectations, practices from NWMPHN, both bulk-billing and mixed-billing, appear to have better Quality Improvement Measure performance than their counterparts working in the generally more socioeconomically advantaged EMPHN (@fig-phn-nwmphn-emphn-mmm-1-qim-weighted-mean-comparison). Likewise, WentWest practices, both bulk-billing and mixed-billing, appear to have better Quality Improvement Measure performance than their Sydney North counterparts (@fig-phn-wentwest-swsphn-sydneynorth-qim-weighted-mean-comparison) (due to different range in MMMs, the South West Sydney and Sydney North PHN statistics are not as directly comparable).
 
 There is no obvious explanation for the unexpected finding that practices with low-resource populations have better QIM outcomes than practices from high-resource populations.
 
@@ -222,7 +223,7 @@ df_wide <- df %>%
 
 {{< pagebreak >}}
 
-## Modified Monash area - All, Primary Health networks - all
+## Modified Monash area -- All, Primary Health networks -- all
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-mmm-all-qim-all
@@ -327,7 +328,7 @@ ggplot(
   )
 ```
 
-## Modified Monash Area - 1, Primary Health Network - All
+## Modified Monash Area -- 1, Primary Health Network -- All
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-mmm-1-qim-all
@@ -510,7 +511,7 @@ ggplot(
 
 [^weighted_mean]: Three QIMS (4, 5, 6) are influenza vaccination QIMs. A single patient's influenza vaccination status can be counted in all three QIMs (if the patient is a 65+ year old living with diabetes and COPD). The 'weighted' mean reduces the influence of influenza vaccination QIMs by 1/3 compared to other QIMs, thereby reducing the overall influence of influenza vaccination on the mean QIM.
 
-## Primary Health Network - NWMPHN, Modified Monash Area - 1
+## Primary Health Network -- NWMPHN, Modified Monash Area -- 1
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-mmm-1-phn-nwmphn-qim-all
@@ -771,7 +772,7 @@ ggplot(
   )
 ```
 
-## Primary Health Network - WentWest, Modified Monash Area - 1
+## Primary Health Network -- WentWest, Modified Monash Area -- 1
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-wentwest-mmm-1-qim-all
@@ -1034,7 +1035,7 @@ ggplot(
   )
 ```
 
-## Primary Health Network - Tasmania, Modified Monash Area - 1 to 3
+## Primary Health Network -- Tasmania, Modified Monash Area -- 1 to 3
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-tasmania-qim-all
@@ -1140,7 +1141,7 @@ ggplot(
   )
 ```
 
-## Primary Health Network - Hunter, New England and Central Coast
+## Primary Health Network -- Hunter, New England and Central Coast
 
 ```{r, fig.height = 5.5, fig.width = 6.5}
 #| label: fig-phn-hneccphn-mmm-1-qim-all
