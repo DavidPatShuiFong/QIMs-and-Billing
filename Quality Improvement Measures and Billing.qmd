@@ -14,7 +14,7 @@ abstract: |
   perform better on brief, non-invasive measures such as recording smoking status, alcohol
   history and weight. They perform comparatively worse on measures requiring more clinician
   time or procedures -- such as measuring glycaemic control in diabetes, influenza
-  immunisation particularly cervical screening. Structural factors, including time
+  immunisation and particularly cervical screening. Structural factors, including time
   pressure, patients living with low socioeconomic resources, multiple morbidity, cultural
   distance and scarcity of same-gendered clinicians are plausible explanations for
   bulk-billing practices performing comparatively worse on some QIM measures.
