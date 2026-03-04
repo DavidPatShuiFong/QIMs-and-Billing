@@ -17,7 +17,11 @@ abstract: |
   immunisation and particularly cervical screening. Structural factors, including time
   pressure, patients living with low socioeconomic resources, multiple morbidity, cultural
   distance and scarcity of same-gendered clinicians are plausible explanations for
-  bulk-billing practices performing comparatively worse on some QIM measures.
+  bulk-billing practices performing comparatively worse on some QIM measures. 
+  
+  Some of the relative deficiences in bulk-billing practice QIM performance compared to
+  their mixed-billing peers are reversed in more regional and remote practices
+  e.g. in Modified Monash Model 4 areas.
   
   Contrary to expectations, practices in primary health networks with lower socioeconomic
   populations -- including North West Melbourne and Western Sydney -- outperform those in
@@ -79,7 +83,7 @@ Practice data derived from Cubiko[^cubiko] Touchstone, February 2026. As of 2025
 
 ## Results and Discussion
 
-### Quality improvement measure performance is similar between bulk-billing clinics and mixed-billing clinics
+### Quality Improvement Measure performance is similar between bulk-billing clinics and mixed-billing clinics
 
 Quality Improvement Measure (QIM) performance for bulk-billing clinics is broadly similar to mixed-billing clinics. Bulk-billing and mixed-billing clinics perform at similar levels across nearly all quality measures. The overlap in performance is substantial and the median scores nearly identical. This is the case both overall (@fig-mmm-all-qim-mean) and for most individual QIMs (@fig-mmm-all-qim-all).
 
@@ -87,7 +91,7 @@ For example, the top 10th centile of predominantly bulk-billling clinics perform
 
 The statistics for a set of more homogeneous practices, such as practices located in [Modified Monash Model](https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm) Area 1 (metropolitan areas of major cities) are also broadly similar for bulk-billing clinics and mixeed-billing clinics (@fig-mmm-1-qim-all, @fig-mmm-all-qim-mean-comparison, @fig-mmm-all-qim-weighted-mean-comparison).
 
-### Characteristics of quality improvement measures where bulk-billing clinics tend to perform better -- or worse -- than mixed-billing clinics
+### Characteristics of Quality Improvement Measures where bulk-billing clinics tend to perform better -- or worse -- than mixed-billing clinics {#sec-individual-qim-bb-vs-mixed}
 
 Bulk-billing clinics tend to perform better than mixed-billing clinics at quality improvement measures which involve brief and non-invasive screening and measurement.
 
@@ -95,7 +99,7 @@ Bulk-billing clinics perform comparatively worse than mixed-billing clinics at q
 
 QIMs which involve relatively brief and non-invasive activities include smoking history (QIM 2), alcohol history (QIM 7), weight and height measurement (QIM 3) and measuring the blood pressure of those who live with diabetes (QIM 10).
 
-More invasive and time-consuming -- for patient and/or clinician -- QIMs include blood-tests to measure glycaemic control in diabetics (QIM 1) and taking measurements -- including blood cholesterol etc. -- for cardiovascular risk assessment (QIM 8). The use of injectable therapeutics such as influenza vaccination (QIMs 4, 5 and 6) are both time consuming and invasive. Cervical screening (QIM 9) is even more time consuming and invasive. 
+More invasive and time-consuming -- for patient and/or clinician -- QIMs include blood-tests to measure glycaemic control in diabetics (QIM 1) and taking measurements -- including blood cholesterol etc. -- for cardiovascular risk assessment (QIM 8). The use of injectable therapeutics such as influenza vaccination (QIMs 4, 5 and 6) are both time consuming and invasive. Cervical screening (QIM 9) is even more time consuming and invasive. (Note that bulk-billing clinics in some regional areas perform relatively well in the more time-intensive QIMs, see @sec-rurality).
 
 Structural factors -- not clinic quality -- likely explain why bulk-billing clinic underperform on some time-intensive QIMs. Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures reduce health care screening activities and chronic disease management activities[^paul].
 
@@ -133,11 +137,11 @@ Dedicated funding for practice nurse time, targeted patient recall systems, and 
 
 Workforce data on GP gender distribution by socioeconomic region and billing type would help clarify whether this explains the relatively poor cervical screening performance of bulk-billing clinics. Targeted incentives for female clinicians in predominantly bulk-billing settings could close the inequity.
 
-### Quality improvement measures and rurality (Modified Monash Model areas)
+### Rurality (Modified Monash Model areas) and Quality Improvement Measures {#sec-rurality}
 
-Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance appears to *increase* for bulk-billing practices in MMM4 (medium rural towns) compared to MMM1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN.
+Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance appears to *increase* for bulk-billing practices in MMM4 (medium rural towns) compared to MMM1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN. @fig-mmm-4-qim-all (MMM 4) and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison (HNECCPHN) show the performance between bulk-billing and mixed-billing clinics for individual QIMs. In contrast to MMM1 practices (@fig-mmm-1-qim-all), bulk-billing practices in MMM4 perform relatively well for the time intensive QIMs (@sec-individual-qim-bb-vs-mixed): cervical screening (QIM 9), measuring CVD risk factors (QIM 8) and influenza immunisation of at-risk populations (QIM 4, 5, 6).
 
-The Modified Monash Model (MMM) defines whether a location is metropolitan, rural, remote or very remote[^mmm]. The MMM has been designed to designate areas of increasing disadvantage due to poor access to healthcare and increased healthcare needs, e.g. related with low socioeconomic status[^mcgrail] [^versace]. The Modified Monash Model is used to determine eligibility for health workforce programs, including increased bulk-billing incentives[^gphotn2024].
+The Modified Monash Model (MMM) defines whether a location is metropolitan, rural, remote or very remote[^mmm]. The MMM has been designed to designate areas of increasing disadvantage due to poor access to healthcare and increased healthcare needs, e.g. related with low socioeconomic status[^mcgrail] [^versace]. The Modified Monash Model is used to determine eligibility for health workforce programs, including increasing bulk-billing incentives[^gphotn2024] with increasing rurality.
 
 [^mcgrail]: "Discussion Paper: Development of a national Index of Access for Primary Health Care in Australia", McGrail and Humphreys, 2015. *Centre of Research Excellence in Rural and Remote Primary Health Care*. Monash University, School of Rural Health.
 
@@ -159,9 +163,11 @@ MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA
 
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
+The reason for the relatively better performance of more regional and remote bulk-billing practices (up to MMM 4) compared to their mixed-billing peers is not clear. MMM 4 practices do benefit from slightly better individual bulk-billing service incentives and other workforce incentives compared to MMM 1 practices.
+
 A potential natural experiment exists at MMM boundaries where similar bulk-billing practices on either side of MMM boundaries face different financial and workforce incentives. Differing QIM performance across MMM boundaries is potentially attributable to the difference in those incentives.
 
-### Comparing quality improvement measures between primary health networks in relatively low and high socioeconomic areas
+### Relative socioeconomic disadvantage between primary health networks and Quality Improvement Measures
 
 Within each major Australian cities, some primary health networks serve populations which are, on average, more socioeconomically advantaged or disadvantaged than other primary health networks in the same city.
 
@@ -328,60 +334,7 @@ ggplot(
   )
 ```
 
-## Modified Monash Area -- 1, Primary Health Network -- All
-
-```{r, fig.height = 5.5, fig.width = 6.5}
-#| label: fig-mmm-1-qim-all
-#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, MMM 1"
-
-# 1) Filter to MMM = "1", PHN = "All" and prepare labels
-df_box <- df_wide %>%
-  filter(MMM == "MMM1", PHN == "All") %>%
-  mutate(
-    QIM_label = paste0(QIM, ". ", `QIM description`),
-    QIM_label = fct_reorder(QIM_label, QIM),
-    # ensure centile columns are numeric
-    across(c(p10, p25, p50, p75, p90), as.numeric)
-  )
-
-# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
-ggplot(
-  df_box,
-  aes(
-    x = QIM_label,
-    ymin   = p10,
-    lower  = p25,
-    middle = p50,
-    upper  = p75,
-    ymax   = p90,
-    fill   = Billing
-  )
-) +
-  geom_boxplot(
-    stat = "identity",
-    position = position_dodge(width = 0.85),
-    width = 0.65,
-    alpha = 0.9
-  ) +
-  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
-  labs(
-    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
-    subtitle = "Subset: MMM = 1, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
-    x = "Quality Improvement Measure",
-    y = "Proportion (%)",
-    fill = "Billing"
-  ) +
-  theme_minimal(base_size = 12) +
-  theme(
-    axis.text.x = element_text(angle = 50, hjust = 1),
-    legend.position = "top",
-    plot.subtitle = element_text(lineheight = 1.1),
-    panel.grid.minor = element_blank()
-  )
-
-```
-
-### Modified Monash Model (MMM) area comparison
+## Modified Monash Model (MMM) area comparison
 
 ```{r}
 #| label: fig-mmm-all-qim-mean-comparison
@@ -510,6 +463,112 @@ ggplot(
 ```
 
 [^weighted_mean]: Three QIMS (4, 5, 6) are influenza vaccination QIMs. A single patient's influenza vaccination status can be counted in all three QIMs (if the patient is a 65+ year old living with diabetes and COPD). The 'weighted' mean reduces the influence of influenza vaccination QIMs by 1/3 compared to other QIMs, thereby reducing the overall influence of influenza vaccination on the mean QIM.
+
+### Modified Monash Area -- 1, Primary Health Network -- All
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-1-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, MMM 1"
+
+# 1) Filter to MMM = "1", PHN = "All" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM1", PHN == "All") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
+    subtitle = "Subset: MMM = 1, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
+### Modified Monash Area -- 4, Primary Health Network -- All
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-4-qim-all
+#| fig-cap: "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed, MMM 4"
+
+# 1) Filter to MMM = "1", PHN = "All" and prepare labels
+df_box <- df_wide %>%
+  filter(MMM == "MMM4", PHN == "All") %>%
+  mutate(
+    QIM_label = paste0(QIM, ". ", `QIM description`),
+    QIM_label = fct_reorder(QIM_label, QIM),
+    # ensure centile columns are numeric
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots (whiskers = 10th/90th; box = 25th–75th; line = 50th)
+ggplot(
+  df_box,
+  aes(
+    x = QIM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
+    # subtitle = "Subset: MMM = 4, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x = "Quality Improvement Measure",
+    y = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 50, hjust = 1),
+    legend.position = "top",
+    plot.subtitle = element_text(lineheight = 1.1),
+    panel.grid.minor = element_blank()
+  )
+
+```
 
 ## Primary Health Network -- NWMPHN, Modified Monash Area -- 1
 
