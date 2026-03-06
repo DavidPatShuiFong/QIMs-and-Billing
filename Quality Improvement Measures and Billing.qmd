@@ -161,7 +161,14 @@ MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA
 
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
-The reason for the relatively better performance of more regional and remote bulk-billing practices (up to MMM 4) compared to their mixed-billing peers is not clear. MMM 4 practices do benefit from slightly better individual bulk-billing service incentives and other workforce incentives compared to MMM 1 practices.
+The reason for the relatively better performance of more regional and remote bulk-billing practices (up to MMM 4) compared to their mixed-billing peers is not clear.
+
+MMM 4 practices do benefit from slightly better individual bulk-billing service incentives and other workforce incentives compared to MMM 1 practices. For example, as of February 2026 the bulk-billing incentive for a typical consultation service is \$35.30[^item_75873] in a MMM 4 practice compared to \$21.85[^item_75870] for a MMM 1 practice. In addition to fee-for-service, the government pays financial incentives to doctors working in MMM 4 worth up to \$18,000 per year[^workforce_incentives_doctor] (to doctors working in both mixed-billing or bulk-billing practices). Compared to MMM 1 practices, MMM 4 practices are also paid 20% more for various practice incentives e.g. to employ a practice nurse or pharmacist[^workforce_incentives_practice].
+
+[^item_75873]: [Medicare Benefits Schedule item 75873](https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&qt=ItemID&q=75873)
+[^item_75870]: [Medicare Beneifts Schedule item 75870](https://www9.health.gov.au/mbs/fullDisplay.cfm?type=item&qt=ItemID&q=75870)
+[^workforce_incentives_doctor]: ["Workforce Incentive Program Doctor Stream Guidelines"](https://www.health.gov.au/sites/default/files/2026-02/workforce-incentive-program-guidelines-doctor-stream.pdf). Effective date: 16 February 2026, Department of Health, Disability and Ageing. Australian Government.
+[^workforce_incentives_practice]: ["Incentives and support for GPs, general practices and other health professionals in MM 4 locations"](https://www.health.gov.au/sites/default/files/2026-02/incentives-and-support-for-gps-and-general-practices-in-modified-monash-4-locations_0.pdf), Department of Health Disability and Ageing. Australian Government.
 
 A potential natural experiment exists at MMM boundaries where similar bulk-billing practices on either side of MMM boundaries face different financial and workforce incentives. Differing QIM performance across MMM boundaries is potentially attributable to the difference in those incentives.
 
