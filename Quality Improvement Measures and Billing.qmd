@@ -40,6 +40,7 @@ format:
   pdf:
     documentclass: scrartcl
     papersize: a4
+    fontsize: 12pt
     toc: true
     output: true
     echo: false
@@ -53,6 +54,7 @@ format:
       text: |
         \usepackage{float}
         \floatplacement{figure}{H}
+        \usepackage{libertinus}
 execute:
   warning: false
   error: false
@@ -73,7 +75,7 @@ General practices receive payments to report their Quality Improvement Measures 
 
 This paper compares Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill 80% or more of consultations ('bulk-billing' practices) and other 'mixed-billing' practices during the time period July 2024 to June 2025.
 
-*This paper is a secondary use of de-identified, aggregated practice statistics retrieved from Cubiko[^cubiko] Touchstone software, extracted February 2026. As of 2025, Cubiko Touchstone draws upon data from 1048 Australian general practices[^hotn2025] which have opted-in to provide data for Cubiko Touchstone. The findings in this paper are an observational, visual exploration of summary statistics. Raw data was not available for formal statistical analysis. The primary use of Cubiko Touchstone statistics was for practice self-reflection. This paper has not been written or endorsed by Cubiko. The observations and commentary are of the author alone and do not represent the views or opinions of Cubiko or its employees.*
+*This paper is a secondary use of de-identified, aggregated practice statistics retrieved from Cubiko[^cubiko] Touchstone software, extracted February 2026. As of 2025, Cubiko Touchstone draws upon data from 1048 Australian general practices[^hotn2025] which have opted-in to provide data for Cubiko Touchstone. The findings in this paper are an observational, visual exploration of summary statistics. Raw data was not available for formal statistical analysis. The primary use of Cubiko Touchstone statistics is for practice self-reflection. This paper has not been written or endorsed by Cubiko. The observations and commentary are of the author alone and do not represent the views or opinions of Cubiko or its employees.*
 
 [^cubiko]: "2023 Touchstone General Practice Industry Report" (published 2024), [Cubiko](https://www.cubiko.com.au/). At the time of the 2023 report, 24% of practices contributing to Cubiko Touchstone data were predominantly bulk-billing practices (billing 80+% of consultations), 75% of practices were 'mixed billing'. The "Health of the Nation 2025" report by the RACGP notes that the bulk-billing rate remained relatively steady in the Touchstone dataset throughout 2023 and 2024.
 
@@ -145,7 +147,15 @@ The Modified Monash Model (MMM) defines whether a location is metropolitan, rura
 
 [^gphotn2024]: "General Practice Health of the Nation 2024", Royal Australian College of General Practitioners, 2024.
 
-Despite the presumed reduced socioeconomic resources and healthcare resources available to those living in more remote areas, the median QIM performance appears to *increase* for bulk-billing practices in MMM 4 (medium rural towns) compared to MMM 1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN. @fig-mmm-4-qim-all (MMM 4) and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison (HNECCPHN) show the performance between bulk-billing and mixed-billing clinics for individual QIMs. In contrast to MMM 1 practices (@fig-mmm-1-qim-all), bulk-billing practices in MMM 4 perform relatively well for the time intensive QIMs (@sec-individual-qim-bb-vs-mixed): cervical screening (QIM 9), measuring CVD risk factors (QIM 8) and influenza immunisation of at-risk populations (QIM 4, 5, 6).
+Despite the reduced socioeconomic, education and healthcare resources available to those living in more remote areas and higher levels of morbidity, disease burden and disability [^aihw_rural_remote], the median QIM performance appears to *increase* for bulk-billing practices in MMM 4 (medium rural towns) compared to MMM 1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN. @fig-mmm-4-qim-all (MMM 4) and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison (HNECCPHN) show the performance between bulk-billing and mixed-billing clinics for individual QIMs. In contrast to MMM 1 practices (@fig-mmm-1-qim-all), bulk-billing practices in MMM 4 perform relatively well for the time intensive QIMs (@sec-individual-qim-bb-vs-mixed): cervical screening (QIM 9), measuring CVD risk factors (QIM 8) and influenza immunisation of at-risk populations (QIM 4, 5, 6).
+
+[^aihw_rural_remote]: "Rural and remote health", Web article, Australian Institute of Health and Welfare (AIHW), Australian Government. retrieved March 2026. https://www.aihw.gov.au/reports/rural-remote-australians/rural-and-remote-health
+
+These statistics are consistent with findings that cancer screening participation is sometimes highest in regional areas, rather than city areas or remote areas e.g. bowel cancer screening participations rates are higher for people living in inner regional areas compared to major cities or remote areas[^aihw_bowel_cancer] and breast cancer screening participation rates are higher in outer and inner regional areas compared to major cities or remote areas[^aihw_breast_cancer], but for cervical screening participation rate was highest in major cities[^aihw_ncsp].
+
+[^aihw_bowel_cancer]: "National Bowel Cancer Screening Progrma monitoring report 2025", Web report, Australian Institute of Health and Welfare (AIHW), Australian Government. retrieved March 2026. https://www.aihw.gov.au/reports/cancer-screening/nbcsp-monitoring-2025
+[^aihw_breast_cancer]: "BreastScreen Australia monitoring report 2025", Web report, Australian Institute of Health and Welfare (AIHW), Australian Government, retrieved March 2026. https://www.aihw.gov.au/reports/cancer-screening/breastscreen-australia-monitoring-report-2025
+[^aihw_ncsp]: "National Cervical Screening Program monitoring report 2025", Web report, Australian Institute of Health and Welfare (AIHW), Australian Government, retrieved March 2026. https://www.aihw.gov.au/reports/cancer-screening/ncsp-monitoring-report-2025
 
 Modified Monash Category | Inclusions
 ---|---:
@@ -162,6 +172,11 @@ MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
 The reason for the relatively better performance of more regional and remote bulk-billing practices (up to MMM 4) compared to their mixed-billing peers is not clear.
+
+General practice doctors training in rural and remote areas learn and practice clinical and reasoning skills as the result of higher levels of exposure to a diverse range of patient complexities and medical conditions[^young]. General practice doctors training in rural and remote areas also build connections with the community they work in[^kanakis], potentially improving clinical care through a clinician having better understanding of patient context. It is possible that doctors working in rural and remote areas achieve better clinical skills and better understanding of patient context which help mitigate the health outcome disadvantages of living in more remote areas.
+
+[^young]: "A comparative evaluation of quality and depth of learning by trainee doctors in regional, rural, and remote locations", Young et al, 2023. *BMC Medical Education*. 2023 Apr 5;**23**(1):215. doi: 10.1186/s12909-023-04175-7
+[^kanakis]: "How does GP training impact rural and remote underserved communities? Exploring community and professional perceptions", Kanakis et al, 2020. *BMC Health Services Research*. 2020 Aug 31;**20**(1):812. doi: 10.1186/s12913-020-05684-7
 
 MMM 4 practices do benefit from slightly better individual bulk-billing service incentives and other workforce incentives compared to MMM 1 practices. For example, as of February 2026 the bulk-billing incentive for a typical consultation service is \$35.30[^item_75873] in a MMM 4 practice compared to \$21.85[^item_75870] for a MMM 1 practice. In addition to fee-for-service, the government pays financial incentives to doctors working in MMM 4 worth up to \$18,000 per year[^workforce_incentives_doctor] (to doctors working in both mixed-billing or bulk-billing practices). Compared to MMM 1 practices, MMM 4 practices are also paid 20% more for various practice incentives e.g. to employ a practice nurse or pharmacist[^workforce_incentives_practice].
 
@@ -188,7 +203,7 @@ Contrary to expectations, practices from NWMPHN, both bulk-billing and mixed-bil
 
 There is no obvious explanation for the unexpected finding that practices with low-resource populations have better QIM outcomes than practices from high-resource populations.
 
-Practices with low-resource populations might be more accustomed to encountering patients with chronic conditions and practices with high-resource populations might see more patients with minor acute conditions, e.g upper respiratory tract infections (Valenti et al, 2016). It is unclear from existing literature whether clinicians working with low socioeconomic populations develop efficiencies that offset the demands of working with patients with multiple morbidity and low resources.
+Practices with low-resource populations might be more accustomed to encountering patients with chronic conditions and practices with high-resource populations might see more patients with minor acute conditions, e.g upper respiratory tract infections (Valenti et al, 2016). Clinicians working with more patients with multiple morbidities in rural areas might develop better clinical reasoning skills (see @sec-rurality}. It is unclear from existing literature whether clinicians working with low socioeconomic populations in major urban areas develop efficiencies and skills that offset the demands of working with patients with multiple morbidity and low resources.
 
 Perhaps significant proportions of primary care general practices in higher resource populations have 'specialised' into activities such as cosmetic medicine, and have reduced emphasis on 'basic' primary care activities such as weight measurement, taking an alcohol history and checking the blood pressure of patients living with diabetes. Perhaps practices in higher resource populations have a generally higher profit motive, which is associated with poorer quality outcomes[^brosig-koch]. It may be that PHN-level chronic disease performance may be degraded not by poverty or workload, but by market specialisation in wealthier areas. Research into practice orientation in high socioeconomic areas could consider whether current incentive structures inadvertently allow high income area practices to opt out of chronic disease care.
 
