@@ -14,9 +14,10 @@ abstract: |
   perform better on brief, non-invasive measures such as recording smoking status, alcohol
   history and weight. Bulk-billing practices perform comparatively worse on measures
   requiring more clinician time or procedures -- such as measuring glycaemic control
-  in diabetes, influenza immunisation and cervical screening, particularly practices in
+  in diabetes, influenza immunisation and cervical screening -- particularly practices in
   urban (Modified Monash Model 1) and very remote (Modified Monash Model 6) areas.
-  Structural factors, including time pressure, patients living with low socioeconomic
+  Structural factors, including time pressure as the result of the structure of Medicare
+  rebates favouring shorter consultations, patients living with low socioeconomic
   resources, multiple morbidity, cultural distance and scarcity of same-gendered clinicians
   are plausible explanations for bulk-billing practices performing comparatively worse
   on some QIM measures. 
@@ -27,7 +28,9 @@ abstract: |
   warrant further investigation.
   
   Targeted support for time-intensive chronic diseases at practices with high-need and
-  disadvantaged populations represent the clearest policy opportunity identified
+  disadvantaged populations and better structuring of Medicare Benefit Schedule rebates
+  to reimburse clinicians for more time-consuming preventive and chronic disease 
+  management activities represent the policy opportunities identified
   by this data.
 number-sections: true
 format: 
