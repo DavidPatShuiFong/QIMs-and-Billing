@@ -189,7 +189,7 @@ MM 7 | **Very remote communities**: All other areas that are categorised ASGS-RA
 
 [^mmm]: "About the Modified Monash Model", Department of Health, Disability and Ageing. Australian Government. retrieved 26th February 2026. https://www.health.gov.au/topics/rural-health-workforce/classifications/mmm?language=en
 
-The reason for the relatively better performance of more regional and remote bulk-billing practices (up to MMM 4) compared to their mixed-billing peers is not clear.
+The reason for the relatively better performance of more regional and remote bulk-billing practices (up to MMM 4) compared to their more urban peers is not clear.
 
 General practice doctors training in rural and remote areas learn and practice clinical and reasoning skills as the result of higher levels of exposure to a diverse range of patient complexities and medical conditions[^young]. General practice doctors training in rural and remote areas also build connections with the community they work in[^kanakis], potentially improving clinical care through a clinician having better understanding of patient context. It is possible that doctors working in rural and remote areas achieve better clinical skills and better understanding of patient context which help mitigate the health outcome disadvantages of living in more remote areas.
 
