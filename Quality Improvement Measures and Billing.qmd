@@ -67,13 +67,29 @@ execute:
 
 ## Introduction
 
-The Quality Improvement Measures (QIMs) are intended to support a regional and national understanding of chronic disease management in areas of high need[^aihw_qim]. The QIMs are not designed to assess individual general practices or general practitioner performance. 
+The universal health insurance system of Australia (Medicare) provides rebates (payments) for private health care services provided by clinicians to patients. *Bulk-billing* -- where the clinician agrees to charge the patient no more than the government-set insurance price for the service -- essentially allows the patient consultation to be 'free' (i.e. no out-of-pocket expense). The alternative to bulk-billing is that the clinician charges the patient a price greater than the government-set insurance price.
+
+Bulk-billed services are politically popular and several recent government funding initiatives have aimed to promote and increase bulk-billing[^duckett]. The low cost of bulk-billed services (i.e. no co-payment) improves healthcare access and continuity of care for patients with low income and multiple chronic conditions[^breadon] [^butler].
+
+[^duckett]: "Labor and the Coalition have pledged to raise GP bulk billing. Here’s what the Medicare boost means for patients", Duckett, 2025. *The Conversation*, February 23, 2025. https://theconversation.com/labor-and-the-coalition-have-pledged-to-raise-gp-bulk-billing-heres-what-the-medicare-boost-means-for-patients-250604
+
+[^breadon]: "A new Medicare: Strengthening general practice", Breadon et al, 2022. Grattan Institute.
+
+[^butler]: "Association of individual-socioeconomic variation in quality-of-primary care with area-level service organisation: A multilevel analysis using linked data", Butler et al, 2023. *Journal of Evaluation in Clinical Practice* **29**(6):984--997. https://doi.org/10.1111/jep.13834
+
+Although there is no current evidence that bulk-billed services are associated with low value care such as unnecessary antibiotics and imaging[^scott], there is concern that widespread bulk-billing entrenches a dysfunctional funding model[^breadon2025]. The current Medicare rebate structure financially rewards the clinician to see a high volume of patients with many short visits rather than longer visits, regardless of the patient's needs. Shorter consultations could result in less time to explore complex or chronic conditions, less opportunity for preventive health discussions, less time to build a doctor-patient relationship and perhaps a risk of addressing only the presenting complaint rather than the 'whole patient'.
+
+[^scott]: "Physician Competition and Low-Value Health Care", Scott et al, 2022. *American Journal of Health Economics* **8**(2):Spring 2022. https://doi.org/10.1086/718509
+
+[^breadon2025]: "Bulk-billing rates are up. But there’s more to delivering the best possible care", Breadon and Chapman, 2025. *The Conversation*, February 13, 2026. https://theconversation.com/bulk-billing-rates-are-up-but-theres-more-to-delivering-the-best-possible-care-275669
+
+Measurement of clinician and clinic participation in preventive health and chronic disease management activities are included in the national Quality Improvement Measures (QIMs)[^aihw_qim]. The Quality Improvement Measures (QIMs) are intended to support a regional and national understanding of chronic disease management. Quality Improvement measure include preventive vaccination for the elderly and those with chronic conditions (QIM 4, 5, 6), preventive cancer screening (QIM 9), cardiovascular risk screening (QIM 8), weight screening (QIM 3), drug and alcohol screening (QIM 2, 7) and chronic disease management and monitoring (QIM 1, 10),
 
 [^aihw_qim]: "[Practice Incentives Program Quality Improvement Measures: annual data update 2024-2025](https://www.aihw.gov.au/reports/primary-health-care/pipqi-measures-2024-25/contents/introduction)", Australian Institute of Health and Welfare (AIHW), Australian Government
 
 General practices receive payments to report their Quality Improvement Measures to the Primary Health Networks, but currently receive no payment for improving their scores. Primary Health Networks *do* report to participating general practices their Quality Improvement Measures scores relative to the other general practices within the same Primary Health Network.
 
-This paper compares Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill 80% or more of consultations ('bulk-billing' practices) and other 'mixed-billing' practices during the time period July 2024 to June 2025.
+This paper compares Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill 80% or more of services/consultations ('bulk-billing' practices) and other 'mixed-billing' practices during the time period July 2024 to June 2025.
 
 *This paper is a secondary use of de-identified, aggregated practice statistics retrieved from Cubiko[^cubiko] Touchstone software, extracted February 2026. The findings in this paper are an observational, visual exploration of summary statistics. Raw data was not available for formal statistical analysis.*
 
