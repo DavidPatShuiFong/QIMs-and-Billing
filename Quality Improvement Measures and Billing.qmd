@@ -597,7 +597,7 @@ ggplot(
   scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
     # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
-    # subtitle = "Subset: MMM = 4, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    subtitle = "Subset: MMM = 4, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
     fill = "Billing"
@@ -650,7 +650,7 @@ ggplot(
   scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
   labs(
     # title = "Quality Improvement Measures: Bulk-Bill (BB) 80+% vs Mixed",
-    # subtitle = "Subset: MMM = 6, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
+    subtitle = "Subset: MMM = 6, PHN = All\nbox = 25th–50th–75th; whiskers = 10th/90th centiles",
     x = "Quality Improvement Measure",
     y = "Proportion (%)",
     fill = "Billing"
@@ -664,6 +664,278 @@ ggplot(
   )
 
 ```
+
+### Modified Monash Areas 1 to 6, QIM 2 smoking status
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-comparison-qim-smoking
+#| fig-cap: "Quality Improvement Measure 2 Smoking: Bulk-Bill (BB) 80+% vs Mixed, MMM comparison"
+
+# 1) Filter to Smoking History QIM across all individual MMM levels, PHN = "All"
+df_box <- df_wide %>%
+  filter(
+    QIM == 2,
+    PHN == "All",
+    MMM != "All"
+  ) %>%
+  mutate(
+    MMM_label = fct_reorder(MMM, as.numeric(str_extract(MMM, "\\d+"))),
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots comparing MM1–MM6, dodged by Billing
+ggplot(
+  df_box,
+  aes(
+    x      = MMM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x    = "Modified Monash Model Category",
+    y    = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x      = element_text(angle = 0, hjust = 0.5),
+    legend.position  = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+### Modified Monash Areas 1 to 6, QIM 1 HbA1C in diabetics
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-comparison-qim-hba1c
+#| fig-cap: "Quality Improvement Measure 1 HbA1c Diabetics: Bulk-Bill (BB) 80+% vs Mixed, MMM comparison"
+
+# 1) Filter to HbA1C QIM across all individual MMM levels, PHN = "All"
+df_box <- df_wide %>%
+  filter(
+    QIM == 1,
+    PHN == "All",
+    MMM != "All"
+  ) %>%
+  mutate(
+    MMM_label = fct_reorder(MMM, as.numeric(str_extract(MMM, "\\d+"))),
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots comparing MM1–MM6, dodged by Billing
+ggplot(
+  df_box,
+  aes(
+    x      = MMM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x    = "Modified Monash Model Category",
+    y    = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x      = element_text(angle = 0, hjust = 0.5),
+    legend.position  = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+### Modified Monash Areas 1 to 6, QIM 8 cardiovascular risk assessment
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-comparison-qim-cvrisk
+#| fig-cap: "Quality Improvement Measure 8 cardiovascular risk: Bulk-Bill (BB) 80+% vs Mixed, MMM comparison"
+
+# 1) Filter to HbA1C QIM across all individual MMM levels, PHN = "All"
+df_box <- df_wide %>%
+  filter(
+    QIM == 8,
+    PHN == "All",
+    MMM != "All"
+  ) %>%
+  mutate(
+    MMM_label = fct_reorder(MMM, as.numeric(str_extract(MMM, "\\d+"))),
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots comparing MM1–MM6, dodged by Billing
+ggplot(
+  df_box,
+  aes(
+    x      = MMM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x    = "Modified Monash Model Category",
+    y    = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x      = element_text(angle = 0, hjust = 0.5),
+    legend.position  = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+### Modified Monash Areas 1 to 6, QIM 4/5/6 influenza vaccination
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-comparison-qim-influenzavax
+#| fig-cap: "Quality Improvement Measures 4/5/6 influenza vaccination: Bulk-Bill (BB) 80+% vs Mixed, MMM comparison"
+
+# 1) Filter to HbA1C QIM across all individual MMM levels, PHN = "All"
+df_box <- df_wide %>%
+  filter(
+    QIM %in% c(4, 5, 6),
+    PHN == "All",
+    MMM != "All"
+  ) %>%
+  mutate(
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  ) %>%
+  group_by(MMM, Billing) %>%
+  summarise(
+    p10 = mean(p10, na.rm = TRUE),
+    p25 = mean(p25, na.rm = TRUE),
+    p50 = mean(p50, na.rm = TRUE),
+    p75 = mean(p75, na.rm = TRUE),
+    p90 = mean(p90, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    MMM_label = fct_reorder(MMM, as.numeric(str_extract(MMM, "\\d+")))
+  )
+
+# 2) Plot precomputed boxplots comparing MM1–MM6, dodged by Billing
+ggplot(
+  df_box,
+  aes(
+    x      = MMM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x    = "Modified Monash Model Category",
+    y    = "Mean Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x      = element_text(angle = 0, hjust = 0.5),
+    legend.position  = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+### Modified Monash Areas 1 to 6, QIM 9 cervical screening
+
+```{r, fig.height = 5.5, fig.width = 6.5}
+#| label: fig-mmm-comparison-qim-cst
+#| fig-cap: "Quality Improvement Measure 9 cervical screening: Bulk-Bill (BB) 80+% vs Mixed, MMM comparison"
+
+# 1) Filter to HbA1C QIM across all individual MMM levels, PHN = "All"
+df_box <- df_wide %>%
+  filter(
+    QIM == 9,
+    PHN == "All",
+    MMM != "All"
+  ) %>%
+  mutate(
+    MMM_label = fct_reorder(MMM, as.numeric(str_extract(MMM, "\\d+"))),
+    across(c(p10, p25, p50, p75, p90), as.numeric)
+  )
+
+# 2) Plot precomputed boxplots comparing MM1–MM6, dodged by Billing
+ggplot(
+  df_box,
+  aes(
+    x      = MMM_label,
+    ymin   = p10,
+    lower  = p25,
+    middle = p50,
+    upper  = p75,
+    ymax   = p90,
+    fill   = Billing
+  )
+) +
+  geom_boxplot(
+    stat = "identity",
+    position = position_dodge(width = 0.85),
+    width = 0.65,
+    alpha = 0.9
+  ) +
+  scale_fill_manual(values = c("BB 80+" = "#1f77b4", "Mixed" = "#ff7f0e")) +
+  labs(
+    subtitle = "box = 25th–50th–75th; whiskers = 10th/90th centiles",
+    x    = "Modified Monash Model Category",
+    y    = "Proportion (%)",
+    fill = "Billing"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x      = element_text(angle = 0, hjust = 0.5),
+    legend.position  = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
 
 ## Primary Health Network -- NWMPHN, Modified Monash Area -- 1
 
