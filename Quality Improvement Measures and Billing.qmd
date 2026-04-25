@@ -13,7 +13,7 @@ abstract: |
   Where differences exist, they follow a consistent pattern: bulk-billing practices
   perform better on brief, non-invasive measures such as recording smoking status, alcohol
   history and weight. Bulk-billing practices perform comparatively worse on measures
-  requiring more clinician time or procedures -- such as measuring glycaemic control
+  requiring more patient or clinician time and procedures -- such as measuring glycaemic control
   in diabetes, influenza immunisation and cervical screening -- particularly practices in
   urban (Modified Monash Model 1) and very remote (Modified Monash Model 6) areas.
   Structural factors, including time pressure as the result of the structure of Medicare
@@ -69,7 +69,7 @@ execute:
 
 ## Introduction
 
-The universal health insurance system of Australia (Medicare) provides rebates (payments) for private health care services provided by clinicians to patients. *Bulk-billing* -- where the clinician agrees to charge the patient no more than the government-set insurance price for the service -- essentially allows the patient consultation to be 'free' (i.e. no out-of-pocket expense). The alternative to bulk-billing is that the clinician charges the patient a price greater than the government-set insurance price.
+The universal health insurance system of Australia, Medicare, provides rebates (payments) for private health care services provided by clinicians to patients. *Bulk-billing* -- where the clinician agrees to charge the patient no more than the government-set insurance price for the service -- allows the patient to regard the consultation as being cost-free (i.e. no out-of-pocket expense). The alternative to bulk-billing is that the clinician charges the patient a price greater than the government-set insurance price.
 
 Bulk-billed services are politically popular and several recent government funding initiatives have aimed to promote and increase bulk-billing[^duckett]. The low cost of bulk-billed services (i.e. no co-payment) improves healthcare access and continuity of care for patients with low income and multiple chronic conditions[^breadon] [^butler].
 
@@ -89,7 +89,7 @@ Measurement of clinician and clinic participation in preventive health and chron
 
 [^aihw_qim]: "[Practice Incentives Program Quality Improvement Measures: annual data update 2024-2025](https://www.aihw.gov.au/reports/primary-health-care/pipqi-measures-2024-25/contents/introduction)", Australian Institute of Health and Welfare (AIHW), Australian Government
 
-General practices receive payments to report their Quality Improvement Measures to the Primary Health Networks, but currently receive no payment for improving their scores. Primary Health Networks *do* report to participating general practices their Quality Improvement Measures scores relative to the other general practices within the same Primary Health Network.
+General practices receive payments to report their Quality Improvement Measures to the Primary Health Networks, but currently receive no payment for improving their QIM performance. Primary Health Networks *do* report to participating general practices their Quality Improvement Measures performance relative to the other general practices within the same Primary Health Network.
 
 This paper compares Quality Improvement Measure (QIM) outcomes between practices which predominantly bulk-bill 80% or more of services/consultations ('bulk-billing' practices) and other 'mixed-billing' practices during the time period July 2024 to June 2025.
 
@@ -139,7 +139,7 @@ Cervical screening in a clinic is also improved by use of clinic time and resour
 
 [^ochre]: "[Insights into gender paygap amongst General Practitioners in Australia: An Ochre Health Study](https://ochrehealth.com.au/wp-content/uploads/2025/11/Paper-Insights-into-gender-paygap-amongst-general-pracitioners-An-Ochre-Health-study-May-2025.pdf)", Ochre Health Pty Ltd., April 2025.  
 
-Structural factors -- not clinic quality -- likely explain why bulk-billing clinic underperform on some time-intensive QIMs. Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures reduce health care screening activities and chronic disease management activities[^paul]. The current Medicare Benefits Schedule rebates financially disadvantage clinicians who consult for longer with a patient. Improving the structure of Medicare Benefits Schedule rebates to reduce or eliminate the financial disadvantage for a clinician to engage in longer consultations -- as is often required for consultations with preventative, multi-morbidity and psycho-social components -- could encourage and financially allow bulk-billing clinicians to engage in time-consuming quality improvement activities[^javanparast].
+Structural factors -- not clinic quality -- likely explain why bulk-billing clinic underperform on some time-intensive QIMs. Low patient resources and cultural or social distance can reduce the effectiveness and increase the time required to discuss and carry out quality improvement activities[^valentin] [^alkhamees]. Relatively poor remuneration (if predominantly bulk-billing) and high levels of multiple morbidity[^watt] and subsequent high clinician workload[^BuffelduVaure] might restrict clinician time. Time pressures reduce health care screening activities and chronic disease management activities[^paul]. The current Medicare Benefits Schedule rebates financially disadvantage clinicians who have longer consult durations with patients. Improving the structure of Medicare Benefits Schedule rebates to reduce or eliminate the financial disadvantage for a clinician to engage in longer consultations -- as is often required for consultations with preventative, multi-morbidity and psycho-social components -- could encourage and financially allow bulk-billing clinicians to engage in time-consuming quality improvement activities[^stone] [^javanparast].
 
 [^valentin]: "Bridging inequity gaps in healthcare through tailored support: implementation perspectives of the Social Health Bridge-Building Programme", Valentin et al, 2025 Feb. *BMC Health Services Research* **25**:208. https://doi.org/10.1186/s12913-025-12359-8
 
@@ -150,6 +150,8 @@ Structural factors -- not clinic quality -- likely explain why bulk-billing clin
 [^BuffelduVaure]: "Potential workload in applying clinical practice guidelines for patients with chronic conditions and multimorbidity: a systematic analysis" Buffel du Vaure et al, 2016. *BMJ Open* 2016;**6**:e010119. doi: 10.1136/bmjopen-2015-010119
 
 [^paul]: "Access to chronic disease care in general practice: the acceptability of implementing systematic waiting-room screening using computer-based patient-reported risk status.", Paul et al, 2013. *The British journal of general practice : the journal of the Royal College of General Practitioners*, **63**(614), e620--e626. https://doi.org/10.3399/bjgp13X671605
+
+[^stone]: "‘I love my job, but it’s time to go’: wellbeing triggers for retirement in Australian female general practitioners", Stone et al, 2025. *Australian Health Review*, **49**(6):AH25170. https://doi.org/10.1071/AH25170
 
 [^javanparast]: "General practice staff and patient experiences of a multicomponent intervention for people at high risk of poor health outcomes: a qualitative study", Javanparast et al, 2024. *BMC Prim. Care* **25**(18) https://doi.org/10.1186/s12875-023-02256-6
 
@@ -169,7 +171,7 @@ The Modified Monash Model (MMM) defines whether a location is metropolitan, rura
 
 [^gphotn2024]: "General Practice Health of the Nation 2024", Royal Australian College of General Practitioners, 2024.
 
-Despite the reduced socioeconomic, education and healthcare resources available to those living in more remote areas and higher levels of morbidity, disease burden and disability [^aihw_rural_remote], the median QIM performance appears to *increase* for bulk-billing practices in MMM 4 (medium rural towns) compared to MMM 1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN. @fig-mmm-4-qim-all (MMM 4) and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison (HNECCPHN) show the performance between bulk-billing and mixed-billing clinics for individual QIMs. In contrast to MMM 1 practices (@fig-mmm-1-qim-all), bulk-billing practices in MMM 4 perform relatively well for the time intensive QIMs (see @sec-individual-qim-bb-vs-mixed): cervical screening (QIM 9), measuring CVD risk factors (QIM 8) and influenza immunisation of at-risk populations (QIM 4, 5, 6).
+Despite the reduced socioeconomic, education and healthcare resources available to those living in more remote areas and higher levels of morbidity, disease burden and disability[^aihw_rural_remote], the median QIM performance appears to *increase* for bulk-billing practices in MMM 4 (medium rural towns) compared to MMM 1 (metropolitan areas). @fig-mmm-all-qim-mean-comparison compares MMMs Australia-wide. @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison compares MMMs within the Hunter New England and Central Coast PHN. MMM 5/6 QIM performance for bulk-billing practices is less than MMM 4 QIM performance, both Australia-wide and also within the HNECCPHN. @fig-mmm-4-qim-all (MMM 4) and @fig-phn-hneccphn-mmm-123-qim-weighted-mean-comparison (HNECCPHN) show the performance between bulk-billing and mixed-billing clinics for individual QIMs. In contrast to MMM 1 practices (@fig-mmm-1-qim-all), bulk-billing practices in MMM 4 perform well compared to their mixed-billing counterparts for the time intensive QIMs (see @sec-individual-qim-bb-vs-mixed): cervical screening (QIM 9. @fig-mmm-comparison-qim-cst), measuring CVD risk factors (QIM 8. @fig-mmm-comparison-qim-cvrisk) and influenza immunisation of at-risk populations (QIM 4, 5, 6. @fig-mmm-comparison-qim-influenzavax).
 
 [^aihw_rural_remote]: "Rural and remote health", Web article, Australian Institute of Health and Welfare (AIHW), Australian Government. retrieved March 2026. https://www.aihw.gov.au/reports/rural-remote-australians/rural-and-remote-health
 
